@@ -8,23 +8,26 @@ version: 1.0.0+1
 environment:
   sdk: '>=3.4.3 <4.0.0'
 
-
 dependencies:
   flutter:
     sdk: flutter
   get_it: ^7.7.0
   shared_preferences: ^2.3.2
+  freezed_annotation: ^2.4.1
   equatable: ^2.0.5
   dio: ^5.4.3+1
   flutter_bloc: ^8.1.6
-  internet_connection_checker: 
+  internet_connection_checker: null
   flutter_animate: ^4.5.0
   dartz: ^0.10.1
   cupertino_icons: ^1.0.6
-  http_interceptor: 
+  http_interceptor: null
   logger: ^2.4.0
   page_transition: ^2.1.0
-
+  intl: ^0.19.0
+  flutter_localizations:
+        sdk: flutter
+  intl_phone_field: ^3.2.0
 
 
 dev_dependencies:
@@ -32,7 +35,8 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^3.0.0
-
+  build_runner: ^2.4.11
+  freezed: ^2.5.2
 
 flutter:
 
@@ -45,4 +49,5 @@ flutter:
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Regular.ttf
-
+flutter_intl:
+  enabled: true

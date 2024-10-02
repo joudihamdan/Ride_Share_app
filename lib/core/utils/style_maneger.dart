@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'color_manager.dart';
@@ -33,7 +32,7 @@ class StyleManager {
       fontWeight: FontWeight.w500,
       fontFamily: "Poppins",
       color: ColorManager.whiteColor);
-      
+
   static TextStyle containerHeader = const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w500,
@@ -88,11 +87,15 @@ class StyleManager {
       fontFamily: "Poppins",
       color: ColorManager.lightgrey);
 
-static ButtonStyle withFill =  ElevatedButton.styleFrom(
-            fixedSize: const Size(200, 100),
-          side: const BorderSide(color: ColorManager.darkGreen),
-          shape: ContinuousRectangleBorder(
-              borderRadius: BorderRadius.circular(10)),
-          backgroundColor: ColorManager.darkGreen);
+  static ButtonStyle withFill = ElevatedButton.styleFrom(
+      fixedSize: const Size(200, 50),
+      side: const BorderSide(color: ColorManager.darkGreen),
+      shape: ContinuousRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      backgroundColor: ColorManager.darkGreen);
 
+  static ButtonStyle withoutFill = ElevatedButton.styleFrom(
+    fixedSize: const Size(200, 50),
+    side: const BorderSide(color: ColorManager.darkGreen),
+    shape: ContinuousRectangleBorder(borderRadius: BorderRadius.circular(10)),
+  );
 }

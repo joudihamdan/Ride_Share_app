@@ -1,19 +1,27 @@
+import 'package:flutter/material.dart';
+import 'package:ride_share_app/generated/l10n.dart';
+
 class StringManager {
-  static String headerOnBoarding1 = "Anywhere you are";
-  static String headerOnBoarding1Desc =
-      "Sell houses easily with the help of\nListenoryx and to make this line big\nI am writing more.";
+  final BuildContext context;
 
-  static String headerOnBoarding2 = "At anytime";
-  static String headerOnBoarding2Desc =
-      "Sell houses easily with the help of\nListenoryx and to make this line big\nI am writing more.";
+  StringManager(this.context);
 
-  static String headerOnBoarding3 = "Book your car";
-  static String headerOnBoarding3Desc =
-      "Sell houses easily with the help of\nListenoryx and to make this line big\nI am writing more.";
+  String get headerOnBoarding1 => S.of(context).where;
+  String get headerOnBoarding1Desc => S.of(context).whereDes;
+  String get headerOnBoarding2 => S.of(context).time;
+  String get headerOnBoarding2Desc => S.of(context).whereDes;
+  String get headerOnBoarding3 => S.of(context).book;
+  String get headerOnBoarding3Desc => S.of(context).whereDes;
+  String get welcome => S.of(context).welcome;
+  String get welcomeDes => S.of(context).welcomeDes;
+  String get create => S.of(context).createaccount;
+  String get login => S.of(context).LogIn;
+  String get skip => S.of(context).skip;
+  String get go =>S.of(context).go;
+
 
   static String enterLocation = "Enable your location";
-  static String locationText =
-      "Choose your location to start find the request around you";
+  static String locationText = "";
 
   static String payment = "Payment Success";
   static String paymentDes =
@@ -24,8 +32,4 @@ class StringManager {
 
   static String addMoney = "Add Success";
   static String addMoneyDes = "Your money has been add successfully ";
-
-  static String welcome = "Welcome";
-  static String welcomeDesc = "Have a better sharing experience ";
-
 }

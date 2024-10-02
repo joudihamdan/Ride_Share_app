@@ -1,47 +1,51 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:ride_share_app/core/global/helper/navigation_helper.dart';
 import 'package:ride_share_app/core/utils/assets_manager.dart';
 import 'package:ride_share_app/core/utils/color_manager.dart';
 import 'package:ride_share_app/core/utils/string_manager.dart';
-import 'package:ride_share_app/features/onBoarding/screen/welcom_screen.dart';
-import 'package:ride_share_app/features/onBoarding/widge/onboarding_content.dart';
+import 'package:ride_share_app/features/onBoarding/pages/welcom_page.dart';
+import 'package:ride_share_app/features/onBoarding/widget/onboarding_content.dart';
 import '../../../../core/utils/style_maneger.dart';
 
-class OnBoardingScreen extends StatefulWidget {
-  const OnBoardingScreen({super.key});
+class OnBoardingPage extends StatefulWidget {
+  const OnBoardingPage({super.key});
 
   @override
-  State<OnBoardingScreen> createState() => _OnBoardingScreenState();
+  State<OnBoardingPage> createState() => _OnBoardingPageState();
 }
 
-class _OnBoardingScreenState extends State<OnBoardingScreen> {
+class _OnBoardingPageState extends State<OnBoardingPage> {
   late PageController _controller;
   double _progressValue = 0.3;
-
-  static List<OnboardingContent> screens = [
-    OnboardingContent(
-      image: AssetsManager.atAnyTime,
-      title: StringManager.headerOnBoarding1,
-      caption: StringManager.headerOnBoarding1Desc,
-    ),
-    OnboardingContent(
-      image: AssetsManager.atAnyWhere,
-      title: StringManager.headerOnBoarding2,
-      caption: StringManager.headerOnBoarding2Desc,
-    ),
-    OnboardingContent(
-      image: AssetsManager.bookYourCar,
-      title: StringManager.headerOnBoarding3,
-      caption: StringManager.headerOnBoarding3Desc,
-    )
-  ];
+  late String headerOnBoarding1;
+  late String headerOnBoarding1Desc;
+  late String headerOnBoarding2;
+  late String headerOnBoarding2Desc;
+  late String headerOnBoarding3;
+  late String headerOnBoarding3Desc;
+  late String skip;
+  late String go;
 
   @override
   void initState() {
-    _controller = PageController(initialPage: 0);
     super.initState();
+    _controller = PageController(initialPage: 0);
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final stringManager = StringManager(context);
+    headerOnBoarding1 = stringManager.headerOnBoarding1;
+    headerOnBoarding1Desc = stringManager.headerOnBoarding1Desc;
+    headerOnBoarding2 = stringManager.headerOnBoarding2;
+    headerOnBoarding2Desc = stringManager.headerOnBoarding2Desc;
+    headerOnBoarding3 = stringManager.headerOnBoarding3;
+    headerOnBoarding3Desc = stringManager.headerOnBoarding3Desc;
+    skip = stringManager.skip;
+    go=stringManager.go;
   }
 
   @override
@@ -52,8 +56,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
   void _handleNextButtonPressed() {
     if (_progressValue > 0.9) {
-      Navigator.push(context,
-          MaterialPageRoute(builder: (context) => const WelcomeScreen()));
+      NavigationHelper.navigateWithFade(context, const WelcomPage());
     } else {
       setState(() {
         _progressValue += 0.35;
@@ -63,21 +66,32 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
   @override
   Widget build(BuildContext context) {
+    List<OnboardingContent> screens = [
+      OnboardingContent(
+        image: AssetsManager.atAnyTime,
+        title: headerOnBoarding1,
+        caption: headerOnBoarding1Desc,
+      ),
+      OnboardingContent(
+        image: AssetsManager.atAnyWhere,
+        title: headerOnBoarding2,
+        caption: headerOnBoarding2Desc,
+      ),
+      OnboardingContent(
+        image: AssetsManager.bookYourCar,
+        title: headerOnBoarding3,
+        caption: headerOnBoarding3Desc,
+      )
+    ];
     return Scaffold(
       appBar: AppBar(
         actions: [
           TextButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                PageTransition(
-                    duration: const Duration(seconds: 3),
-                    child: const WelcomeScreen(),
-                    type: PageTransitionType.rightToLeft),
-              );
+              NavigationHelper.navigateWithFade(context, const WelcomPage());
             },
             child: Text(
-              "Skip",
+              skip,
               style: StyleManager.skipAndback,
             ),
           )
@@ -114,13 +128,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   ),
                   onPressed: () {
                     _controller.nextPage(
-                        duration: const Duration(microseconds: 300),
-                        curve: Curves.ease);
+                        duration: const Duration(seconds: 1),
+                        curve: Curves.decelerate);
                     _handleNextButtonPressed();
                   },
                   backgroundColor: ColorManager.lightGreen,
                   child: _progressValue > 0.7
-                      ? const Text("Go")
+                      ?  Text(go)
                       : const Icon(
                           Icons.arrow_right_alt_outlined,
                           color: ColorManager.blackColor,

@@ -1,0 +1,15 @@
+{
+    "where" :"Anywhere you are" ,
+    "whereDes":"Choose your cart very easily\nfrom the nearest parking lot\nafter determining your location.",
+    "time":"At anytime",
+    "book":"Book your car",
+    "location": "Enable your location",
+    "locationDes" :"Choose your location to start find the request around you",
+    "welcome":"Welcome",
+    "welcomeDes": "Have a better sharing experience",
+    "createaccount" :"Create an account",
+    "LogIn":"Log In",
+    "skip":"Skip",
+    "go":"Go"
+
+}
