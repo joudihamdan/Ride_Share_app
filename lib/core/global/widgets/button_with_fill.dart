@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:ride_share_app/core/utils/style_maneger.dart';
 
 class ButtonWithFill extends StatelessWidget {
   const ButtonWithFill({
     super.key,
     required this.buttonName,
-    required this.onPressed, required this.width, required this.height,
+    required this.onPressed,
+    this.width =double.infinity,
+    this.height=50,
   });
 
   final String buttonName;

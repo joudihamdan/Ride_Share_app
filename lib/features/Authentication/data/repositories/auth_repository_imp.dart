@@ -1,6 +1,5 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: public_member_api_docs, sort_constructors_first, avoid_print
 import 'package:dartz/dartz.dart';
-import 'package:ride_share_app/core/errors/exceptions.dart';
 import 'package:ride_share_app/core/errors/failures.dart';
 import 'package:ride_share_app/core/networks/internet_check.dart';
 import 'package:ride_share_app/features/Authentication/data/datasources/auth_service.dart';
@@ -25,11 +24,13 @@ class AuthRepositoryImp extends AuthRepository {
     if (await internetCheck.isConnected) {
       try {
         SignupModel signupModel = SignupModel.fromSignupReq(signupReq);
-
         final result = await service.signup(signupModel);
+        print("repo right");
         return Right(result);
-      } on ServerException catch (e) {
-        return Left(ServerFailure(message: e.message));
+      } catch (e) {
+        print("repo left");
+
+        return Left(ServerFailure(message: e.toString()));
       }
     } else {
       return Left(OfflineFailure());
@@ -44,9 +45,9 @@ class AuthRepositoryImp extends AuthRepository {
         final result = await service.login(loginModel);
         print("repo right");
         return Right(result);
-      } on ServerException catch (e) {
+      } catch (e) {
         print("repo left");
-        return Left(ServerFailure(message: e.message));
+        return Left(ServerFailure(message: e.toString()));
       }
     } else {
       return Left(OfflineFailure());
@@ -59,8 +60,8 @@ class AuthRepositoryImp extends AuthRepository {
       try {
         await service.logout();
         return const Right(unit);
-      } on ServerException catch (e) {
-        return Left(ServerFailure(message: e.message));
+      } catch (e) {
+        return Left(ServerFailure(message: e.toString()));
       }
     } else {
       return Left(OfflineFailure());

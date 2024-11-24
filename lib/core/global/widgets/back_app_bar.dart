@@ -19,10 +19,10 @@ class BackAppBar extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Image.asset("${AssetsManager.imagesPath}/angle-left.png"),
+            Image.asset("${AssetsManager.imagesPath}/angle-left.png",width: 20,height: 20,),
             Text(
               "back",
-              style: StyleManager.skipAndback,
+              style: StyleManager.skipAndback.copyWith(fontSize: 14),
             )
           ],
         ),

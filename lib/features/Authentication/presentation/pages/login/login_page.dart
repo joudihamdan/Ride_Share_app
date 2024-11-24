@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:ride_share_app/core/global/helper/navigation_helper.dart';
 import 'package:ride_share_app/core/global/helper/showsnackBar.dart';
-import 'package:ride_share_app/core/global/helper/validation.dart';
 import 'package:ride_share_app/core/global/widgets/button_with_fill.dart';
 import 'package:ride_share_app/features/Authentication/domain/entities/login_req.dart';
 import 'package:ride_share_app/features/Authentication/presentation/bloc/Login/Login_bloc.dart';
@@ -26,7 +25,6 @@ class _LoginPageState extends State<LoginPage> {
   GlobalKey<FormState> globalKey = GlobalKey<FormState>();
   TextEditingController passwordd = TextEditingController();
   TextEditingController phone = TextEditingController();
-  bool showPassword = false;
   bool _showPassword = true;
 
   void _togglePasswordVisibility() {
@@ -54,15 +52,15 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   children: [
                     IntlPhoneField(
-                      validator: (text) {
-                        if (text == null) {
-                          return "required";
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
+                      validator: (phoneNumber) {
+                        if (phoneNumber == null || phoneNumber.number.isEmpty) {
+                          return "Phone number is required";
                         }
-                        if (text.isValidNumber()) {
-                          return "invalid number";
+                        if (!RegExp(r'^\d+$').hasMatch(phoneNumber.number)) {
+                          return "Phone number must contain only digits";
                         }
-
-                        return "please enter your phone number";
+                        return null;
                       },
                       controller: phone,
                       keyboardType: TextInputType.number,
@@ -75,26 +73,26 @@ class _LoginPageState extends State<LoginPage> {
                       height: 10,
                     ),
                     CustomTextFormField(
-                      controller: passwordd,
-                      labelText: "Password",
-                      keyboardType: TextInputType.number,
-                      isPassword: true,
-                      obscureText: _showPassword,
-                      togglePasswordVisibility: _togglePasswordVisibility,
-                      validator: (password) {
-                        if (password == null || password.isEmpty) {
-                          return "required";
-                        }
-                        if (password.length < 8) {
-                          return "couldn't be less than 8 digit";
-                        }
-                        if (!Validation.validatePassword(password)) {
-                          return "shoul contain capital and small letters and numbers";
-                        }
-
-                        // return "this field can't be empty";
-                      },
-                    ),
+                        controller: passwordd,
+                        labelText: "Password",
+                        keyboardType: TextInputType.number,
+                        isPassword: true,
+                        obscureText: _showPassword,
+                        //togglePasswordVisibility: _togglePasswordVisibility,
+                        validator: (password) {
+                          if (password == null || password.isEmpty) {
+                            return "Password is required";
+                          }
+                          if (password.length < 8) {
+                            return "Password must be at least 8 characters long";
+                          }
+                          if (!RegExp(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)')
+                              .hasMatch(password)) {
+                            return "Password must contain uppercase, lowercase letters, and numbers";
+                          }
+                          return null; 
+                        },
+                        ),
                     const ForgetPassword(),
                     const SizedBox(
                       height: 60,
@@ -122,7 +120,9 @@ class _LoginPageState extends State<LoginPage> {
                             return ButtonWithFill(
                               buttonName: "Login",
                               onPressed: () {
+                                print("phone is" + "${phone.text.isEmpty}");
                                 if (globalKey.currentState!.validate()) {
+                                  print(globalKey.currentState!.validate());
                                   BlocProvider.of<LoginBloc>(context).add(
                                     LoginEvent.login(
                                       LoginReq(

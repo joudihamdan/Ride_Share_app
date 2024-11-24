@@ -5,6 +5,7 @@ import 'package:ride_share_app/core/global/helper/navigation_helper.dart';
 import 'package:ride_share_app/core/utils/assets_manager.dart';
 import 'package:ride_share_app/core/utils/color_manager.dart';
 import 'package:ride_share_app/core/utils/string_manager.dart';
+import 'package:ride_share_app/features/Map/presentation/pages/get_location_page.dart';
 import 'package:ride_share_app/features/onBoarding/pages/welcom_page.dart';
 import 'package:ride_share_app/features/onBoarding/widget/onboarding_content.dart';
 import '../../../../core/utils/style_maneger.dart';
@@ -88,7 +89,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
         actions: [
           TextButton(
             onPressed: () {
-              NavigationHelper.navigateWithFade(context, const WelcomPage());
+              NavigationHelper.navigateWithFade(context, const GetLocationPage());
             },
             child: Text(
               skip,

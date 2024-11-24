@@ -14,8 +14,10 @@ class AssetsManager {
   static const e_bike = '$imagesPath/e_bike.png';
   static const mountine = '$imagesPath/mountine.png';
   static const hybrid = '$imagesPath/hybrid.png';
-    static const car = '$imagesPath/road.png';
-
+  static const car = '$imagesPath/road.png';
+  static const navigationBar = '$imagesPath/Vector.png';
+  static const location = '$imagesPath/Location.png';
+  static const place = '$imagesPath/Place Indicate.png';
 
   /// Icons
 

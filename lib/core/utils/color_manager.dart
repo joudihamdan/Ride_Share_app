@@ -4,7 +4,7 @@ class ColorManager {
   static const lightGreen = Color(0xff08B783);
   static const darkGreen = Color(0xff008955);
   static const checkbox = Color(0xff43A048);
-  static const green200 = Color(0xff8AD4B5);
+  static const green200 = Color(0xff8AD4B5); 
   static const green100 = Color(0xFFB9E5D1);
   static const lightGreenContainer = Color(0xffE2F5ED);
 

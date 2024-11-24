@@ -15,6 +15,550 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
+mixin _$SignupEvent {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() createAccount,
+    required TResult Function(String firstName, String lastName, String phone,
+            String username, String birthDate)
+        firstSend,
+    required TResult Function(String password, String confirmPassword)
+        secondSend,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? createAccount,
+    TResult? Function(String firstName, String lastName, String phone,
+            String username, String birthDate)?
+        firstSend,
+    TResult? Function(String password, String confirmPassword)? secondSend,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? createAccount,
+    TResult Function(String firstName, String lastName, String phone,
+            String username, String birthDate)?
+        firstSend,
+    TResult Function(String password, String confirmPassword)? secondSend,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CreateAccount value) createAccount,
+    required TResult Function(_FirstSend value) firstSend,
+    required TResult Function(_SecondSend value) secondSend,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CreateAccount value)? createAccount,
+    TResult? Function(_FirstSend value)? firstSend,
+    TResult? Function(_SecondSend value)? secondSend,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CreateAccount value)? createAccount,
+    TResult Function(_FirstSend value)? firstSend,
+    TResult Function(_SecondSend value)? secondSend,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SignupEventCopyWith<$Res> {
+  factory $SignupEventCopyWith(
+          SignupEvent value, $Res Function(SignupEvent) then) =
+      _$SignupEventCopyWithImpl<$Res, SignupEvent>;
+}
+
+/// @nodoc
+class _$SignupEventCopyWithImpl<$Res, $Val extends SignupEvent>
+    implements $SignupEventCopyWith<$Res> {
+  _$SignupEventCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$CreateAccountImplCopyWith<$Res> {
+  factory _$$CreateAccountImplCopyWith(
+          _$CreateAccountImpl value, $Res Function(_$CreateAccountImpl) then) =
+      __$$CreateAccountImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CreateAccountImplCopyWithImpl<$Res>
+    extends _$SignupEventCopyWithImpl<$Res, _$CreateAccountImpl>
+    implements _$$CreateAccountImplCopyWith<$Res> {
+  __$$CreateAccountImplCopyWithImpl(
+      _$CreateAccountImpl _value, $Res Function(_$CreateAccountImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CreateAccountImpl implements _CreateAccount {
+  _$CreateAccountImpl();
+
+  @override
+  String toString() {
+    return 'SignupEvent.createAccount()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$CreateAccountImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() createAccount,
+    required TResult Function(String firstName, String lastName, String phone,
+            String username, String birthDate)
+        firstSend,
+    required TResult Function(String password, String confirmPassword)
+        secondSend,
+  }) {
+    return createAccount();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? createAccount,
+    TResult? Function(String firstName, String lastName, String phone,
+            String username, String birthDate)?
+        firstSend,
+    TResult? Function(String password, String confirmPassword)? secondSend,
+  }) {
+    return createAccount?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? createAccount,
+    TResult Function(String firstName, String lastName, String phone,
+            String username, String birthDate)?
+        firstSend,
+    TResult Function(String password, String confirmPassword)? secondSend,
+    required TResult orElse(),
+  }) {
+    if (createAccount != null) {
+      return createAccount();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CreateAccount value) createAccount,
+    required TResult Function(_FirstSend value) firstSend,
+    required TResult Function(_SecondSend value) secondSend,
+  }) {
+    return createAccount(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CreateAccount value)? createAccount,
+    TResult? Function(_FirstSend value)? firstSend,
+    TResult? Function(_SecondSend value)? secondSend,
+  }) {
+    return createAccount?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CreateAccount value)? createAccount,
+    TResult Function(_FirstSend value)? firstSend,
+    TResult Function(_SecondSend value)? secondSend,
+    required TResult orElse(),
+  }) {
+    if (createAccount != null) {
+      return createAccount(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CreateAccount implements SignupEvent {
+  factory _CreateAccount() = _$CreateAccountImpl;
+}
+
+/// @nodoc
+abstract class _$$FirstSendImplCopyWith<$Res> {
+  factory _$$FirstSendImplCopyWith(
+          _$FirstSendImpl value, $Res Function(_$FirstSendImpl) then) =
+      __$$FirstSendImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call(
+      {String firstName,
+      String lastName,
+      String phone,
+      String username,
+      String birthDate});
+}
+
+/// @nodoc
+class __$$FirstSendImplCopyWithImpl<$Res>
+    extends _$SignupEventCopyWithImpl<$Res, _$FirstSendImpl>
+    implements _$$FirstSendImplCopyWith<$Res> {
+  __$$FirstSendImplCopyWithImpl(
+      _$FirstSendImpl _value, $Res Function(_$FirstSendImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? firstName = null,
+    Object? lastName = null,
+    Object? phone = null,
+    Object? username = null,
+    Object? birthDate = null,
+  }) {
+    return _then(_$FirstSendImpl(
+      null == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == phone
+          ? _value.phone
+          : phone // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == username
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == birthDate
+          ? _value.birthDate
+          : birthDate // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FirstSendImpl implements _FirstSend {
+  _$FirstSendImpl(
+      this.firstName, this.lastName, this.phone, this.username, this.birthDate);
+
+  @override
+  final String firstName;
+  @override
+  final String lastName;
+  @override
+  final String phone;
+  @override
+  final String username;
+  @override
+  final String birthDate;
+
+  @override
+  String toString() {
+    return 'SignupEvent.firstSend(firstName: $firstName, lastName: $lastName, phone: $phone, username: $username, birthDate: $birthDate)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FirstSendImpl &&
+            (identical(other.firstName, firstName) ||
+                other.firstName == firstName) &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName) &&
+            (identical(other.phone, phone) || other.phone == phone) &&
+            (identical(other.username, username) ||
+                other.username == username) &&
+            (identical(other.birthDate, birthDate) ||
+                other.birthDate == birthDate));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, firstName, lastName, phone, username, birthDate);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FirstSendImplCopyWith<_$FirstSendImpl> get copyWith =>
+      __$$FirstSendImplCopyWithImpl<_$FirstSendImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() createAccount,
+    required TResult Function(String firstName, String lastName, String phone,
+            String username, String birthDate)
+        firstSend,
+    required TResult Function(String password, String confirmPassword)
+        secondSend,
+  }) {
+    return firstSend(firstName, lastName, phone, username, birthDate);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? createAccount,
+    TResult? Function(String firstName, String lastName, String phone,
+            String username, String birthDate)?
+        firstSend,
+    TResult? Function(String password, String confirmPassword)? secondSend,
+  }) {
+    return firstSend?.call(firstName, lastName, phone, username, birthDate);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? createAccount,
+    TResult Function(String firstName, String lastName, String phone,
+            String username, String birthDate)?
+        firstSend,
+    TResult Function(String password, String confirmPassword)? secondSend,
+    required TResult orElse(),
+  }) {
+    if (firstSend != null) {
+      return firstSend(firstName, lastName, phone, username, birthDate);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CreateAccount value) createAccount,
+    required TResult Function(_FirstSend value) firstSend,
+    required TResult Function(_SecondSend value) secondSend,
+  }) {
+    return firstSend(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CreateAccount value)? createAccount,
+    TResult? Function(_FirstSend value)? firstSend,
+    TResult? Function(_SecondSend value)? secondSend,
+  }) {
+    return firstSend?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CreateAccount value)? createAccount,
+    TResult Function(_FirstSend value)? firstSend,
+    TResult Function(_SecondSend value)? secondSend,
+    required TResult orElse(),
+  }) {
+    if (firstSend != null) {
+      return firstSend(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FirstSend implements SignupEvent {
+  factory _FirstSend(
+      final String firstName,
+      final String lastName,
+      final String phone,
+      final String username,
+      final String birthDate) = _$FirstSendImpl;
+
+  String get firstName;
+  String get lastName;
+  String get phone;
+  String get username;
+  String get birthDate;
+  @JsonKey(ignore: true)
+  _$$FirstSendImplCopyWith<_$FirstSendImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SecondSendImplCopyWith<$Res> {
+  factory _$$SecondSendImplCopyWith(
+          _$SecondSendImpl value, $Res Function(_$SecondSendImpl) then) =
+      __$$SecondSendImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String password, String confirmPassword});
+}
+
+/// @nodoc
+class __$$SecondSendImplCopyWithImpl<$Res>
+    extends _$SignupEventCopyWithImpl<$Res, _$SecondSendImpl>
+    implements _$$SecondSendImplCopyWith<$Res> {
+  __$$SecondSendImplCopyWithImpl(
+      _$SecondSendImpl _value, $Res Function(_$SecondSendImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? password = null,
+    Object? confirmPassword = null,
+  }) {
+    return _then(_$SecondSendImpl(
+      null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == confirmPassword
+          ? _value.confirmPassword
+          : confirmPassword // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SecondSendImpl implements _SecondSend {
+  _$SecondSendImpl(this.password, this.confirmPassword);
+
+  @override
+  final String password;
+  @override
+  final String confirmPassword;
+
+  @override
+  String toString() {
+    return 'SignupEvent.secondSend(password: $password, confirmPassword: $confirmPassword)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SecondSendImpl &&
+            (identical(other.password, password) ||
+                other.password == password) &&
+            (identical(other.confirmPassword, confirmPassword) ||
+                other.confirmPassword == confirmPassword));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, password, confirmPassword);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SecondSendImplCopyWith<_$SecondSendImpl> get copyWith =>
+      __$$SecondSendImplCopyWithImpl<_$SecondSendImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() createAccount,
+    required TResult Function(String firstName, String lastName, String phone,
+            String username, String birthDate)
+        firstSend,
+    required TResult Function(String password, String confirmPassword)
+        secondSend,
+  }) {
+    return secondSend(password, confirmPassword);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? createAccount,
+    TResult? Function(String firstName, String lastName, String phone,
+            String username, String birthDate)?
+        firstSend,
+    TResult? Function(String password, String confirmPassword)? secondSend,
+  }) {
+    return secondSend?.call(password, confirmPassword);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? createAccount,
+    TResult Function(String firstName, String lastName, String phone,
+            String username, String birthDate)?
+        firstSend,
+    TResult Function(String password, String confirmPassword)? secondSend,
+    required TResult orElse(),
+  }) {
+    if (secondSend != null) {
+      return secondSend(password, confirmPassword);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CreateAccount value) createAccount,
+    required TResult Function(_FirstSend value) firstSend,
+    required TResult Function(_SecondSend value) secondSend,
+  }) {
+    return secondSend(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CreateAccount value)? createAccount,
+    TResult? Function(_FirstSend value)? firstSend,
+    TResult? Function(_SecondSend value)? secondSend,
+  }) {
+    return secondSend?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CreateAccount value)? createAccount,
+    TResult Function(_FirstSend value)? firstSend,
+    TResult Function(_SecondSend value)? secondSend,
+    required TResult orElse(),
+  }) {
+    if (secondSend != null) {
+      return secondSend(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SecondSend implements SignupEvent {
+  factory _SecondSend(final String password, final String confirmPassword) =
+      _$SecondSendImpl;
+
+  String get password;
+  String get confirmPassword;
+  @JsonKey(ignore: true)
+  _$$SecondSendImplCopyWith<_$SecondSendImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$SignupState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -752,548 +1296,4 @@ class _$OfflineImpl implements _Offline {
 
 abstract class _Offline implements SignupState {
   const factory _Offline() = _$OfflineImpl;
-}
-
-/// @nodoc
-mixin _$SignupEvent {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() createAccount,
-    required TResult Function(String firstName, String lastName, String phone,
-            String username, String birthDate)
-        firstSend,
-    required TResult Function(String password, String confirmPassword)
-        secondSend,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? createAccount,
-    TResult? Function(String firstName, String lastName, String phone,
-            String username, String birthDate)?
-        firstSend,
-    TResult? Function(String password, String confirmPassword)? secondSend,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? createAccount,
-    TResult Function(String firstName, String lastName, String phone,
-            String username, String birthDate)?
-        firstSend,
-    TResult Function(String password, String confirmPassword)? secondSend,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_CreateAccount value) createAccount,
-    required TResult Function(_FirstSend value) firstSend,
-    required TResult Function(_SecondSend value) secondSend,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CreateAccount value)? createAccount,
-    TResult? Function(_FirstSend value)? firstSend,
-    TResult? Function(_SecondSend value)? secondSend,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CreateAccount value)? createAccount,
-    TResult Function(_FirstSend value)? firstSend,
-    TResult Function(_SecondSend value)? secondSend,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $SignupEventCopyWith<$Res> {
-  factory $SignupEventCopyWith(
-          SignupEvent value, $Res Function(SignupEvent) then) =
-      _$SignupEventCopyWithImpl<$Res, SignupEvent>;
-}
-
-/// @nodoc
-class _$SignupEventCopyWithImpl<$Res, $Val extends SignupEvent>
-    implements $SignupEventCopyWith<$Res> {
-  _$SignupEventCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$CreateAccountImplCopyWith<$Res> {
-  factory _$$CreateAccountImplCopyWith(
-          _$CreateAccountImpl value, $Res Function(_$CreateAccountImpl) then) =
-      __$$CreateAccountImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$CreateAccountImplCopyWithImpl<$Res>
-    extends _$SignupEventCopyWithImpl<$Res, _$CreateAccountImpl>
-    implements _$$CreateAccountImplCopyWith<$Res> {
-  __$$CreateAccountImplCopyWithImpl(
-      _$CreateAccountImpl _value, $Res Function(_$CreateAccountImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$CreateAccountImpl implements _CreateAccount {
-  _$CreateAccountImpl();
-
-  @override
-  String toString() {
-    return 'SignupEvent.createAccount()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$CreateAccountImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() createAccount,
-    required TResult Function(String firstName, String lastName, String phone,
-            String username, String birthDate)
-        firstSend,
-    required TResult Function(String password, String confirmPassword)
-        secondSend,
-  }) {
-    return createAccount();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? createAccount,
-    TResult? Function(String firstName, String lastName, String phone,
-            String username, String birthDate)?
-        firstSend,
-    TResult? Function(String password, String confirmPassword)? secondSend,
-  }) {
-    return createAccount?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? createAccount,
-    TResult Function(String firstName, String lastName, String phone,
-            String username, String birthDate)?
-        firstSend,
-    TResult Function(String password, String confirmPassword)? secondSend,
-    required TResult orElse(),
-  }) {
-    if (createAccount != null) {
-      return createAccount();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_CreateAccount value) createAccount,
-    required TResult Function(_FirstSend value) firstSend,
-    required TResult Function(_SecondSend value) secondSend,
-  }) {
-    return createAccount(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CreateAccount value)? createAccount,
-    TResult? Function(_FirstSend value)? firstSend,
-    TResult? Function(_SecondSend value)? secondSend,
-  }) {
-    return createAccount?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CreateAccount value)? createAccount,
-    TResult Function(_FirstSend value)? firstSend,
-    TResult Function(_SecondSend value)? secondSend,
-    required TResult orElse(),
-  }) {
-    if (createAccount != null) {
-      return createAccount(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _CreateAccount implements SignupEvent {
-  factory _CreateAccount() = _$CreateAccountImpl;
-}
-
-/// @nodoc
-abstract class _$$FirstSendImplCopyWith<$Res> {
-  factory _$$FirstSendImplCopyWith(
-          _$FirstSendImpl value, $Res Function(_$FirstSendImpl) then) =
-      __$$FirstSendImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call(
-      {String firstName,
-      String lastName,
-      String phone,
-      String username,
-      String birthDate});
-}
-
-/// @nodoc
-class __$$FirstSendImplCopyWithImpl<$Res>
-    extends _$SignupEventCopyWithImpl<$Res, _$FirstSendImpl>
-    implements _$$FirstSendImplCopyWith<$Res> {
-  __$$FirstSendImplCopyWithImpl(
-      _$FirstSendImpl _value, $Res Function(_$FirstSendImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? firstName = null,
-    Object? lastName = null,
-    Object? phone = null,
-    Object? username = null,
-    Object? birthDate = null,
-  }) {
-    return _then(_$FirstSendImpl(
-      null == firstName
-          ? _value.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == lastName
-          ? _value.lastName
-          : lastName // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == phone
-          ? _value.phone
-          : phone // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == birthDate
-          ? _value.birthDate
-          : birthDate // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$FirstSendImpl implements _FirstSend {
-  _$FirstSendImpl(
-      this.firstName, this.lastName, this.phone, this.username, this.birthDate);
-
-  @override
-  final String firstName;
-  @override
-  final String lastName;
-  @override
-  final String phone;
-  @override
-  final String username;
-  @override
-  final String birthDate;
-
-  @override
-  String toString() {
-    return 'SignupEvent.firstSend(firstName: $firstName, lastName: $lastName, phone: $phone, username: $username, birthDate: $birthDate)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FirstSendImpl &&
-            (identical(other.firstName, firstName) ||
-                other.firstName == firstName) &&
-            (identical(other.lastName, lastName) ||
-                other.lastName == lastName) &&
-            (identical(other.phone, phone) || other.phone == phone) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.birthDate, birthDate) ||
-                other.birthDate == birthDate));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, firstName, lastName, phone, username, birthDate);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$FirstSendImplCopyWith<_$FirstSendImpl> get copyWith =>
-      __$$FirstSendImplCopyWithImpl<_$FirstSendImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() createAccount,
-    required TResult Function(String firstName, String lastName, String phone,
-            String username, String birthDate)
-        firstSend,
-    required TResult Function(String password, String confirmPassword)
-        secondSend,
-  }) {
-    return firstSend(firstName, lastName, phone, username, birthDate);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? createAccount,
-    TResult? Function(String firstName, String lastName, String phone,
-            String username, String birthDate)?
-        firstSend,
-    TResult? Function(String password, String confirmPassword)? secondSend,
-  }) {
-    return firstSend?.call(firstName, lastName, phone, username, birthDate);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? createAccount,
-    TResult Function(String firstName, String lastName, String phone,
-            String username, String birthDate)?
-        firstSend,
-    TResult Function(String password, String confirmPassword)? secondSend,
-    required TResult orElse(),
-  }) {
-    if (firstSend != null) {
-      return firstSend(firstName, lastName, phone, username, birthDate);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_CreateAccount value) createAccount,
-    required TResult Function(_FirstSend value) firstSend,
-    required TResult Function(_SecondSend value) secondSend,
-  }) {
-    return firstSend(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CreateAccount value)? createAccount,
-    TResult? Function(_FirstSend value)? firstSend,
-    TResult? Function(_SecondSend value)? secondSend,
-  }) {
-    return firstSend?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CreateAccount value)? createAccount,
-    TResult Function(_FirstSend value)? firstSend,
-    TResult Function(_SecondSend value)? secondSend,
-    required TResult orElse(),
-  }) {
-    if (firstSend != null) {
-      return firstSend(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _FirstSend implements SignupEvent {
-  factory _FirstSend(
-      final String firstName,
-      final String lastName,
-      final String phone,
-      final String username,
-      final String birthDate) = _$FirstSendImpl;
-
-  String get firstName;
-  String get lastName;
-  String get phone;
-  String get username;
-  String get birthDate;
-  @JsonKey(ignore: true)
-  _$$FirstSendImplCopyWith<_$FirstSendImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$SecondSendImplCopyWith<$Res> {
-  factory _$$SecondSendImplCopyWith(
-          _$SecondSendImpl value, $Res Function(_$SecondSendImpl) then) =
-      __$$SecondSendImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String password, String confirmPassword});
-}
-
-/// @nodoc
-class __$$SecondSendImplCopyWithImpl<$Res>
-    extends _$SignupEventCopyWithImpl<$Res, _$SecondSendImpl>
-    implements _$$SecondSendImplCopyWith<$Res> {
-  __$$SecondSendImplCopyWithImpl(
-      _$SecondSendImpl _value, $Res Function(_$SecondSendImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? password = null,
-    Object? confirmPassword = null,
-  }) {
-    return _then(_$SecondSendImpl(
-      null == password
-          ? _value.password
-          : password // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == confirmPassword
-          ? _value.confirmPassword
-          : confirmPassword // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$SecondSendImpl implements _SecondSend {
-  _$SecondSendImpl(this.password, this.confirmPassword);
-
-  @override
-  final String password;
-  @override
-  final String confirmPassword;
-
-  @override
-  String toString() {
-    return 'SignupEvent.secondSend(password: $password, confirmPassword: $confirmPassword)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SecondSendImpl &&
-            (identical(other.password, password) ||
-                other.password == password) &&
-            (identical(other.confirmPassword, confirmPassword) ||
-                other.confirmPassword == confirmPassword));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, password, confirmPassword);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SecondSendImplCopyWith<_$SecondSendImpl> get copyWith =>
-      __$$SecondSendImplCopyWithImpl<_$SecondSendImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() createAccount,
-    required TResult Function(String firstName, String lastName, String phone,
-            String username, String birthDate)
-        firstSend,
-    required TResult Function(String password, String confirmPassword)
-        secondSend,
-  }) {
-    return secondSend(password, confirmPassword);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? createAccount,
-    TResult? Function(String firstName, String lastName, String phone,
-            String username, String birthDate)?
-        firstSend,
-    TResult? Function(String password, String confirmPassword)? secondSend,
-  }) {
-    return secondSend?.call(password, confirmPassword);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? createAccount,
-    TResult Function(String firstName, String lastName, String phone,
-            String username, String birthDate)?
-        firstSend,
-    TResult Function(String password, String confirmPassword)? secondSend,
-    required TResult orElse(),
-  }) {
-    if (secondSend != null) {
-      return secondSend(password, confirmPassword);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_CreateAccount value) createAccount,
-    required TResult Function(_FirstSend value) firstSend,
-    required TResult Function(_SecondSend value) secondSend,
-  }) {
-    return secondSend(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CreateAccount value)? createAccount,
-    TResult? Function(_FirstSend value)? firstSend,
-    TResult? Function(_SecondSend value)? secondSend,
-  }) {
-    return secondSend?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CreateAccount value)? createAccount,
-    TResult Function(_FirstSend value)? firstSend,
-    TResult Function(_SecondSend value)? secondSend,
-    required TResult orElse(),
-  }) {
-    if (secondSend != null) {
-      return secondSend(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _SecondSend implements SignupEvent {
-  factory _SecondSend(final String password, final String confirmPassword) =
-      _$SecondSendImpl;
-
-  String get password;
-  String get confirmPassword;
-  @JsonKey(ignore: true)
-  _$$SecondSendImplCopyWith<_$SecondSendImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }

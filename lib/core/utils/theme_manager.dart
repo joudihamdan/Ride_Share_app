@@ -4,6 +4,9 @@ import 'package:ride_share_app/core/utils/style_maneger.dart';
 
 class AppTheme {
   static final appTheme = ThemeData(
+    appBarTheme: AppBarTheme(
+      color: Colors.transparent
+    ),
     primaryColor: ColorManager.darkGreen,
     scaffoldBackgroundColor: ColorManager.whiteColor,
     brightness: Brightness.light,
@@ -42,5 +45,6 @@ class AppTheme {
         ),
       ),
     ),
+    
   );
 }

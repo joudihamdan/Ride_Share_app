@@ -1,11 +1,15 @@
-class Validation{
-
- static bool validatePassword(String password) {
-    String pattern =
-        r'^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$&*~]).{8,}$';
-    RegExp regExp = RegExp(pattern);
-
-    return regExp.hasMatch(password);
+class Validation {
+ static String? passwordValidation(password) {
+    if (password == null || password.isEmpty) {
+      return "Password is required";
+    }
+    if (password.length < 8) {
+      return "Password must be at least 8 characters long";
+    }
+    if (!RegExp(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)').hasMatch(password)) {
+      return "Password must contain uppercase, lowercase letters, and numbers";
+    }
+    return null;
   }
-
 }
+

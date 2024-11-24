@@ -6,8 +6,8 @@ class ButtonWithoutFill extends StatelessWidget {
     super.key,
     required this.buttonName,
     this.onPressed,
-    required this.width,
-    required this.height,
+    this.width = double.infinity,
+    this.height = 50,
   });
   final String buttonName;
   final Function()? onPressed;

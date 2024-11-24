@@ -21,7 +21,7 @@ class StringManager {
 
 
   static String enterLocation = "Enable your location";
-  static String locationText = "";
+  static String locationText = "Choose your location to start find the request around you";
 
   static String payment = "Payment Success";
   static String paymentDes =

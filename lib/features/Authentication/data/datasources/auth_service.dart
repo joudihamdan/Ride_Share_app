@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:dio/dio.dart';
 import 'package:ride_share_app/core/constant/api_urls.dart';
 import 'package:ride_share_app/core/errors/exceptions.dart';
@@ -25,7 +27,6 @@ class AuthServiceImp extends AuthService {
         storage
             .get<SharedPreferences>()
             .setString("token", response.data["body"]["token"]);
-        print("beforrrr");
         final authResponse = AuthResponse.fromMap(response.data);
         print("trueeeeeee");
         print(authResponse);
@@ -34,7 +35,9 @@ class AuthServiceImp extends AuthService {
         throw ServerException(message: response.data['message']);
       }
     } on DioException catch (e) {
-      throw ServerException(message: e.response!.data['message']);
+      print(3);
+      print(e.response!.data['message']);
+      throw (e.response!.data['message']);
     }
   }
 
@@ -52,14 +55,14 @@ class AuthServiceImp extends AuthService {
         print(response.data['message']);
         return authResponse;
       } else {
-         print(2);
+        print(2);
         print(response.data['message']);
         throw ServerException(message: response.data['message']);
       }
     } on DioException catch (e) {
       print(3);
-       print(e.response!.data['message']);
-      throw ServerException(message: e.response!.data['message']);
+      print(e.response!.data['message']);
+      throw ( e.response!.data['message']);
     }
   }
 

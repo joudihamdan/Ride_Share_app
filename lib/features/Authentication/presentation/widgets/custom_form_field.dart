@@ -1,51 +1,70 @@
 import 'package:flutter/material.dart';
 import 'package:ride_share_app/core/utils/color_manager.dart';
 
-class CustomTextFormField extends StatelessWidget {
+// ignore: must_be_immutable
+class CustomTextFormField extends StatefulWidget {
   final TextEditingController controller;
   final String labelText;
   final bool isPassword;
   final TextInputType keyboardType;
-  final Function(String?)? validator;
-  final bool obscureText;
-  final VoidCallback? togglePasswordVisibility;
+  final String? Function(String?)? validator;
+  bool obscureText;
+  final bool readOnly;
 
-  const CustomTextFormField({
-    super.key,
-    required this.controller,
-    required this.labelText,
-    this.isPassword = false,
-    required this.keyboardType,
-    this.validator,
-    this.obscureText = false,
-    this.togglePasswordVisibility,
-  });
+  CustomTextFormField(
+      {super.key,
+      required this.controller,
+      required this.labelText,
+      this.isPassword = false,
+      this.keyboardType = TextInputType.text,
+      this.validator,
+      this.obscureText = false,
+      this.readOnly = false});
+
+  @override
+  State<CustomTextFormField> createState() => _CustomTextFormFieldState();
+}
+
+class _CustomTextFormFieldState extends State<CustomTextFormField> {
+  void _togglePasswordVisibility() {
+    setState(() {
+      widget.obscureText = !widget.obscureText;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      autovalidateMode: AutovalidateMode.onUserInteraction,
-      controller: controller,
-      keyboardType: keyboardType,
-      obscureText: obscureText,
-      validator: (value) {
-        if (value == null || value.isEmpty) {
-          return 'This field is required';
-        }
-        return null;
-      },
-      decoration: InputDecoration(
-        labelText: labelText,
-        suffixIcon: isPassword
-            ? IconButton(
-                icon: Icon(
-                  obscureText ? Icons.visibility_off : Icons.visibility,
-                  size: 20,
-                  color: ColorManager.darkGrey,
-                ),
-                onPressed: togglePasswordVisibility,
-              )
-            : null,
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: TextFormField(
+        readOnly: widget.readOnly,
+        autovalidateMode: AutovalidateMode.onUserInteraction,
+        controller: widget.controller,
+        keyboardType: widget.keyboardType,
+        obscureText: widget.obscureText,
+        validator: widget.obscureText
+            ? widget.validator
+            : (value) {
+                if (value == null || value.isEmpty) {
+                  return 'This field is required';
+                }
+                return null;
+              },
+        decoration: InputDecoration(
+          labelText: widget.labelText,
+          suffixIcon: widget.isPassword
+              ? IconButton(
+                  icon: Icon(
+                    widget.obscureText
+                        ? Icons.visibility_off
+                        : Icons.visibility,
+                    size: 20,
+                    color: ColorManager.darkGrey,
+                  ),
+                  onPressed: _togglePasswordVisibility,
+                )
+              : null,
+        ),
       ),
     );
   }
