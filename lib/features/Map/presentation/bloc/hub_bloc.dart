@@ -10,10 +10,11 @@ part 'hub_state.dart';
 
 class HubBloc extends Bloc<HubEvent, HubState> {
   final GetAlHubsUseCase useCase;
-  HubBloc( {required this.useCase}) : super(const HubState.loadInProgress()) {
+  HubBloc({required this.useCase}) : super(const HubState.loadInProgress()) {
     on<HubEvent>(
       (event, emit) async {
-        await event.when(getAllHubs: (double latitude, double longitude) async {
+        await event.when(
+          getAllHubs: (double latitude, double longitude) async {
           final result = await useCase(latitude, longitude);
           result.fold((result) => emit(HubState.error(getFailureType(result))),
               (result) {
@@ -21,7 +22,10 @@ class HubBloc extends Bloc<HubEvent, HubState> {
                 ? emit(HubState.loaded(result))
                 : emit(const HubState.empty());
           });
-        });
+        }, getLocation: () { 
+          
+
+         });
       },
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ride_share_app/core/utils/assets_manager.dart';
+import 'package:ride_share_app/core/utils/string_manager.dart';
 import 'package:ride_share_app/features/HomePage/widgets/navigation_bar_item.dart';
-import 'package:ride_share_app/features/Map/presentation/pages/get_location_page.dart';
 import 'package:ride_share_app/features/Map/presentation/pages/map_page.dart';
 import 'package:ride_share_app/features/Map/presentation/widgets/custom_flutter_map.dart';
 import 'package:ride_share_app/features/Wallet/presentation/pages/wallet_page.dart';
@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> pages = [
     const MapPage(),
     const WelcomPage(),
-     WalletPage(),
+    WalletPage(),
     CustomFlutterMap(),
     const WelcomPage(),
   ];
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
             left: 65,
             child: NavigationBarItem(
               selectedIndex: selectedIndex == 2,
-              title: 'Wallet',
+              title: StringManager.wallet,
               icon: Icons.account_balance_wallet_outlined,
               selectedIcon: Icons.account_balance_wallet,
               onTap: () {
@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 NavigationBarItem(
                   selectedIndex: selectedIndex == 0,
-                  title: 'Home',
+                  title: StringManager.home,
                   icon: Icons.home_outlined,
                   selectedIcon: Icons.home,
                   onTap: () {
@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 NavigationBarItem(
                   selectedIndex: selectedIndex == 1,
-                  title: 'Favourite',
+                  title: StringManager.favourite,
                   icon: Icons.favorite_outline,
                   selectedIcon: Icons.favorite_outlined,
                   onTap: () {
@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 NavigationBarItem(
                   selectedIndex: selectedIndex == 3,
-                  title: 'Offer',
+                  title: StringManager.offer,
                   icon: Icons.local_offer_outlined,
                   selectedIcon: Icons.local_offer,
                   onTap: () {
@@ -119,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 NavigationBarItem(
                   selectedIndex: selectedIndex == 4,
-                  title: 'Profile',
+                  title: StringManager.profile,
                   icon: Icons.person_outline,
                   selectedIcon: Icons.person,
                   onTap: () {

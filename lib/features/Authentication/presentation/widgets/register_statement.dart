@@ -15,7 +15,7 @@ class RegisterStatement extends StatelessWidget {
         const Text("don't have account?"),
         TextButton(
             onPressed: () {
-              NavigationHelper.navigateWithFade(context, const FirstSignupPage());
+              NavigationHelper.navigateWithFade(context,  FirstSignupPage());
             },
             child: Text(
               "register",

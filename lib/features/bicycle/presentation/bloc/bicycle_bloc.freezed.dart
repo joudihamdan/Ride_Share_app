@@ -85,6 +85,9 @@ class _$BicycleEventCopyWithImpl<$Res, $Val extends BicycleEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of BicycleEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -101,6 +104,9 @@ class __$$GetCategoriesImplCopyWithImpl<$Res>
   __$$GetCategoriesImplCopyWithImpl(
       _$GetCategoriesImpl _value, $Res Function(_$GetCategoriesImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of BicycleEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -220,6 +226,8 @@ class __$$GetBicyclesByCategoryImplCopyWithImpl<$Res>
       $Res Function(_$GetBicyclesByCategoryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BicycleEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -259,7 +267,9 @@ class _$GetBicyclesByCategoryImpl implements _GetBicyclesByCategory {
   @override
   int get hashCode => Object.hash(runtimeType, category);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BicycleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetBicyclesByCategoryImplCopyWith<_$GetBicyclesByCategoryImpl>
@@ -347,7 +357,10 @@ abstract class _GetBicyclesByCategory implements BicycleEvent {
       _$GetBicyclesByCategoryImpl;
 
   String get category;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BicycleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetBicyclesByCategoryImplCopyWith<_$GetBicyclesByCategoryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -369,6 +382,8 @@ class __$$GetBicycleImplCopyWithImpl<$Res>
       _$GetBicycleImpl _value, $Res Function(_$GetBicycleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BicycleEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -408,7 +423,9 @@ class _$GetBicycleImpl implements _GetBicycle {
   @override
   int get hashCode => Object.hash(runtimeType, bicycleId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BicycleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetBicycleImplCopyWith<_$GetBicycleImpl> get copyWith =>
@@ -494,7 +511,10 @@ abstract class _GetBicycle implements BicycleEvent {
   const factory _GetBicycle(final int bicycleId) = _$GetBicycleImpl;
 
   int get bicycleId;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BicycleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetBicycleImplCopyWith<_$GetBicycleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -516,6 +536,8 @@ class __$$GetHubContentImplCopyWithImpl<$Res>
       _$GetHubContentImpl _value, $Res Function(_$GetHubContentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BicycleEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -563,7 +585,9 @@ class _$GetHubContentImpl implements _GetHubContent {
   @override
   int get hashCode => Object.hash(runtimeType, category, hubId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BicycleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetHubContentImplCopyWith<_$GetHubContentImpl> get copyWith =>
@@ -651,7 +675,10 @@ abstract class _GetHubContent implements BicycleEvent {
 
   String get category;
   int get hubId;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BicycleEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetHubContentImplCopyWith<_$GetHubContentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -732,6 +759,9 @@ class _$BicycleStateCopyWithImpl<$Res, $Val extends BicycleState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of BicycleState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -748,6 +778,9 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of BicycleState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -871,6 +904,8 @@ class __$$CategoriesLoadedImplCopyWithImpl<$Res>
       $Res Function(_$CategoriesLoadedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BicycleState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -917,7 +952,9 @@ class _$CategoriesLoadedImpl implements _CategoriesLoaded {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_categories));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BicycleState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CategoriesLoadedImplCopyWith<_$CategoriesLoadedImpl> get copyWith =>
@@ -1010,7 +1047,10 @@ abstract class _CategoriesLoaded implements BicycleState {
       _$CategoriesLoadedImpl;
 
   List<String> get categories;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BicycleState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CategoriesLoadedImplCopyWith<_$CategoriesLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1032,6 +1072,8 @@ class __$$BicyclesLoadedImplCopyWithImpl<$Res>
       _$BicyclesLoadedImpl _value, $Res Function(_$BicyclesLoadedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BicycleState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1077,7 +1119,9 @@ class _$BicyclesLoadedImpl implements _BicyclesLoaded {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_bicycles));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BicycleState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BicyclesLoadedImplCopyWith<_$BicyclesLoadedImpl> get copyWith =>
@@ -1170,7 +1214,10 @@ abstract class _BicyclesLoaded implements BicycleState {
       _$BicyclesLoadedImpl;
 
   List<Bicycle> get bicycles;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BicycleState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BicyclesLoadedImplCopyWith<_$BicyclesLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1192,6 +1239,8 @@ class __$$BicycleLoadedImplCopyWithImpl<$Res>
       _$BicycleLoadedImpl _value, $Res Function(_$BicycleLoadedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BicycleState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1230,7 +1279,9 @@ class _$BicycleLoadedImpl implements _BicycleLoaded {
   @override
   int get hashCode => Object.hash(runtimeType, bicycle);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BicycleState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$BicycleLoadedImplCopyWith<_$BicycleLoadedImpl> get copyWith =>
@@ -1321,7 +1372,10 @@ abstract class _BicycleLoaded implements BicycleState {
   const factory _BicycleLoaded(final Bicycle bicycle) = _$BicycleLoadedImpl;
 
   Bicycle get bicycle;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BicycleState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$BicycleLoadedImplCopyWith<_$BicycleLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1343,6 +1397,8 @@ class __$$ErrorImplCopyWithImpl<$Res>
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BicycleState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1381,7 +1437,9 @@ class _$ErrorImpl implements _Error {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BicycleState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -1472,7 +1530,10 @@ abstract class _Error implements BicycleState {
   const factory _Error(final String message) = _$ErrorImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BicycleState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

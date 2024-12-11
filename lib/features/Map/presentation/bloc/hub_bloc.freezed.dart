@@ -16,43 +16,43 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$HubEvent {
-  double get latitude => throw _privateConstructorUsedError;
-  double get longitude => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(double latitude, double longitude) getAllHubs,
+    required TResult Function() getLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(double latitude, double longitude)? getAllHubs,
+    TResult? Function()? getLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(double latitude, double longitude)? getAllHubs,
+    TResult Function()? getLocation,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetAllHubs value) getAllHubs,
+    required TResult Function(_GetLocation value) getLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetAllHubs value)? getAllHubs,
+    TResult? Function(_GetLocation value)? getLocation,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetAllHubs value)? getAllHubs,
+    TResult Function(_GetLocation value)? getLocation,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $HubEventCopyWith<HubEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -60,8 +60,6 @@ mixin _$HubEvent {
 abstract class $HubEventCopyWith<$Res> {
   factory $HubEventCopyWith(HubEvent value, $Res Function(HubEvent) then) =
       _$HubEventCopyWithImpl<$Res, HubEvent>;
-  @useResult
-  $Res call({double latitude, double longitude});
 }
 
 /// @nodoc
@@ -74,32 +72,15 @@ class _$HubEventCopyWithImpl<$Res, $Val extends HubEvent>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? latitude = null,
-    Object? longitude = null,
-  }) {
-    return _then(_value.copyWith(
-      latitude: null == latitude
-          ? _value.latitude
-          : latitude // ignore: cast_nullable_to_non_nullable
-              as double,
-      longitude: null == longitude
-          ? _value.longitude
-          : longitude // ignore: cast_nullable_to_non_nullable
-              as double,
-    ) as $Val);
-  }
+  /// Create a copy of HubEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
-abstract class _$$GetAllHubsImplCopyWith<$Res>
-    implements $HubEventCopyWith<$Res> {
+abstract class _$$GetAllHubsImplCopyWith<$Res> {
   factory _$$GetAllHubsImplCopyWith(
           _$GetAllHubsImpl value, $Res Function(_$GetAllHubsImpl) then) =
       __$$GetAllHubsImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({double latitude, double longitude});
 }
@@ -112,6 +93,8 @@ class __$$GetAllHubsImplCopyWithImpl<$Res>
       _$GetAllHubsImpl _value, $Res Function(_$GetAllHubsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HubEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -160,7 +143,9 @@ class _$GetAllHubsImpl implements _GetAllHubs {
   @override
   int get hashCode => Object.hash(runtimeType, latitude, longitude);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HubEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetAllHubsImplCopyWith<_$GetAllHubsImpl> get copyWith =>
@@ -170,6 +155,7 @@ class _$GetAllHubsImpl implements _GetAllHubs {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(double latitude, double longitude) getAllHubs,
+    required TResult Function() getLocation,
   }) {
     return getAllHubs(latitude, longitude);
   }
@@ -178,6 +164,7 @@ class _$GetAllHubsImpl implements _GetAllHubs {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(double latitude, double longitude)? getAllHubs,
+    TResult? Function()? getLocation,
   }) {
     return getAllHubs?.call(latitude, longitude);
   }
@@ -186,6 +173,7 @@ class _$GetAllHubsImpl implements _GetAllHubs {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(double latitude, double longitude)? getAllHubs,
+    TResult Function()? getLocation,
     required TResult orElse(),
   }) {
     if (getAllHubs != null) {
@@ -198,6 +186,7 @@ class _$GetAllHubsImpl implements _GetAllHubs {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetAllHubs value) getAllHubs,
+    required TResult Function(_GetLocation value) getLocation,
   }) {
     return getAllHubs(this);
   }
@@ -206,6 +195,7 @@ class _$GetAllHubsImpl implements _GetAllHubs {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetAllHubs value)? getAllHubs,
+    TResult? Function(_GetLocation value)? getLocation,
   }) {
     return getAllHubs?.call(this);
   }
@@ -214,6 +204,7 @@ class _$GetAllHubsImpl implements _GetAllHubs {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetAllHubs value)? getAllHubs,
+    TResult Function(_GetLocation value)? getLocation,
     required TResult orElse(),
   }) {
     if (getAllHubs != null) {
@@ -227,14 +218,119 @@ abstract class _GetAllHubs implements HubEvent {
   const factory _GetAllHubs(final double latitude, final double longitude) =
       _$GetAllHubsImpl;
 
-  @override
   double get latitude;
-  @override
   double get longitude;
-  @override
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HubEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetAllHubsImplCopyWith<_$GetAllHubsImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetLocationImplCopyWith<$Res> {
+  factory _$$GetLocationImplCopyWith(
+          _$GetLocationImpl value, $Res Function(_$GetLocationImpl) then) =
+      __$$GetLocationImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetLocationImplCopyWithImpl<$Res>
+    extends _$HubEventCopyWithImpl<$Res, _$GetLocationImpl>
+    implements _$$GetLocationImplCopyWith<$Res> {
+  __$$GetLocationImplCopyWithImpl(
+      _$GetLocationImpl _value, $Res Function(_$GetLocationImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HubEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$GetLocationImpl implements _GetLocation {
+  const _$GetLocationImpl();
+
+  @override
+  String toString() {
+    return 'HubEvent.getLocation()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetLocationImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(double latitude, double longitude) getAllHubs,
+    required TResult Function() getLocation,
+  }) {
+    return getLocation();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(double latitude, double longitude)? getAllHubs,
+    TResult? Function()? getLocation,
+  }) {
+    return getLocation?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(double latitude, double longitude)? getAllHubs,
+    TResult Function()? getLocation,
+    required TResult orElse(),
+  }) {
+    if (getLocation != null) {
+      return getLocation();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetAllHubs value) getAllHubs,
+    required TResult Function(_GetLocation value) getLocation,
+  }) {
+    return getLocation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetAllHubs value)? getAllHubs,
+    TResult? Function(_GetLocation value)? getLocation,
+  }) {
+    return getLocation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetAllHubs value)? getAllHubs,
+    TResult Function(_GetLocation value)? getLocation,
+    required TResult orElse(),
+  }) {
+    if (getLocation != null) {
+      return getLocation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetLocation implements HubEvent {
+  const factory _GetLocation() = _$GetLocationImpl;
 }
 
 /// @nodoc
@@ -306,6 +402,9 @@ class _$HubStateCopyWithImpl<$Res, $Val extends HubState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of HubState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -322,6 +421,9 @@ class __$$EmptyImplCopyWithImpl<$Res>
   __$$EmptyImplCopyWithImpl(
       _$EmptyImpl _value, $Res Function(_$EmptyImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HubState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -436,6 +538,9 @@ class __$$LoadInProgressImplCopyWithImpl<$Res>
   __$$LoadInProgressImplCopyWithImpl(
       _$LoadInProgressImpl _value, $Res Function(_$LoadInProgressImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of HubState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -553,6 +658,8 @@ class __$$ErrorImplCopyWithImpl<$Res>
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HubState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -592,7 +699,9 @@ class _$ErrorImpl implements _Error {
   @override
   int get hashCode => Object.hash(runtimeType, failureType);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HubState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -677,7 +786,10 @@ abstract class _Error implements HubState {
   const factory _Error(final String failureType) = _$ErrorImpl;
 
   String get failureType;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HubState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -699,6 +811,8 @@ class __$$LoadedImplCopyWithImpl<$Res>
       _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of HubState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -743,7 +857,9 @@ class _$LoadedImpl implements _Loaded {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_hubs));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of HubState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
@@ -828,7 +944,10 @@ abstract class _Loaded implements HubState {
   const factory _Loaded(final List<Hub> hubs) = _$LoadedImpl;
 
   List<Hub> get hubs;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of HubState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

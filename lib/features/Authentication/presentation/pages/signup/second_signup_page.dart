@@ -6,19 +6,16 @@ import 'package:ride_share_app/core/global/helper/validation.dart';
 import 'package:ride_share_app/core/global/widgets/back_app_bar.dart';
 import 'package:ride_share_app/core/global/widgets/button_with_fill.dart';
 import 'package:ride_share_app/core/global/widgets/custom_sized_box.dart';
+import 'package:ride_share_app/core/utils/string_manager.dart';
 import 'package:ride_share_app/core/utils/style_maneger.dart';
 import 'package:ride_share_app/features/Authentication/presentation/bloc/Signup/Signup_bloc.dart';
 import 'package:ride_share_app/features/Authentication/presentation/widgets/custom_form_field.dart';
 import 'package:ride_share_app/features/HomePage/pages/home_page.dart';
 
-class SecondSignupPage extends StatefulWidget {
-  const SecondSignupPage({super.key});
+// ignore: must_be_immutable
+class SecondSignupPage extends StatelessWidget {
+  SecondSignupPage({super.key});
 
-  @override
-  State<SecondSignupPage> createState() => _SecondSignupPageState();
-}
-
-class _SecondSignupPageState extends State<SecondSignupPage> {
   GlobalKey<FormState> globalKey = GlobalKey<FormState>();
   TextEditingController password = TextEditingController();
   TextEditingController confirm = TextEditingController();
@@ -28,7 +25,7 @@ class _SecondSignupPageState extends State<SecondSignupPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: BackAppBar(),
+        leading: const BackAppBar(),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -40,19 +37,19 @@ class _SecondSignupPageState extends State<SecondSignupPage> {
               child: Column(
                 children: [
                   Text(
-                    "set your password",
+                    StringManager.setPassword,
                     style: StyleManager.header,
                   ),
                   const sizedBox20(),
                   CustomTextFormField(
                       controller: password,
-                      labelText: "Password",
+                      labelText: StringManager.password,
                       keyboardType: TextInputType.number,
                       validator: Validation.passwordValidation),
                   const sizedBox50(),
                   CustomTextFormField(
                     controller: confirm,
-                    labelText: "confirm Password",
+                    labelText: StringManager.confirm,
                     keyboardType: TextInputType.number,
                     validator: (text) {
                       if (text == null || text.isEmpty) {
@@ -69,7 +66,7 @@ class _SecondSignupPageState extends State<SecondSignupPage> {
                     listener: (context, state) {
                       state.maybeWhen(
                         successCreate: (messages) {
-                          showSnackBar(context, 'Account Create Successful',
+                          showSnackBar(context,StringManager.successRegister ,
                               Colors.green);
                           NavigationHelper.navigateWithFade(
                               context, const HomePage());
@@ -82,11 +79,10 @@ class _SecondSignupPageState extends State<SecondSignupPage> {
                     },
                     builder: (context, state) {
                       return state.maybeWhen(
-                        loadInProgress: () =>
-                            const CircularProgressIndicator(),
+                        loadInProgress: () => const CircularProgressIndicator(),
                         orElse: () {
                           return ButtonWithFill(
-                            buttonName: "Rigester",
+                            buttonName: StringManager.register,
                             onPressed: () {
                               if (globalKey.currentState!.validate()) {
                                 context.read<SignupBloc>().add(
@@ -98,11 +94,10 @@ class _SecondSignupPageState extends State<SecondSignupPage> {
                                 context.read<SignupBloc>().add(
                                       SignupEvent.createAccount(),
                                     );
-                                  
                               } else {
                                 showSnackBar(
                                     context,
-                                    'Please fill all the fields correctly',
+                                  StringManager.wrongFill,
                                     Colors.red);
                               }
                             },

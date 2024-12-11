@@ -85,6 +85,9 @@ class _$SignupEventCopyWithImpl<$Res, $Val extends SignupEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SignupEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -101,6 +104,9 @@ class __$$CreateAccountImplCopyWithImpl<$Res>
   __$$CreateAccountImplCopyWithImpl(
       _$CreateAccountImpl _value, $Res Function(_$CreateAccountImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SignupEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -224,6 +230,8 @@ class __$$FirstSendImplCopyWithImpl<$Res>
       _$FirstSendImpl _value, $Res Function(_$FirstSendImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SignupEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -300,7 +308,9 @@ class _$FirstSendImpl implements _FirstSend {
   int get hashCode =>
       Object.hash(runtimeType, firstName, lastName, phone, username, birthDate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SignupEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FirstSendImplCopyWith<_$FirstSendImpl> get copyWith =>
@@ -395,7 +405,10 @@ abstract class _FirstSend implements SignupEvent {
   String get phone;
   String get username;
   String get birthDate;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SignupEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FirstSendImplCopyWith<_$FirstSendImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -417,6 +430,8 @@ class __$$SecondSendImplCopyWithImpl<$Res>
       _$SecondSendImpl _value, $Res Function(_$SecondSendImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SignupEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -465,7 +480,9 @@ class _$SecondSendImpl implements _SecondSend {
   @override
   int get hashCode => Object.hash(runtimeType, password, confirmPassword);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SignupEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SecondSendImplCopyWith<_$SecondSendImpl> get copyWith =>
@@ -553,7 +570,10 @@ abstract class _SecondSend implements SignupEvent {
 
   String get password;
   String get confirmPassword;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SignupEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SecondSendImplCopyWith<_$SecondSendImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -634,6 +654,9 @@ class _$SignupStateCopyWithImpl<$Res, $Val extends SignupState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -650,6 +673,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -770,6 +796,9 @@ class __$$LoadInProgressImplCopyWithImpl<$Res>
   __$$LoadInProgressImplCopyWithImpl(
       _$LoadInProgressImpl _value, $Res Function(_$LoadInProgressImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -893,6 +922,8 @@ class __$$SuccessCreateImplCopyWithImpl<$Res>
       _$SuccessCreateImpl _value, $Res Function(_$SuccessCreateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -931,7 +962,9 @@ class _$SuccessCreateImpl implements _SuccessCreate {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SuccessCreateImplCopyWith<_$SuccessCreateImpl> get copyWith =>
@@ -1022,7 +1055,10 @@ abstract class _SuccessCreate implements SignupState {
   const factory _SuccessCreate(final String message) = _$SuccessCreateImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuccessCreateImplCopyWith<_$SuccessCreateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1044,6 +1080,8 @@ class __$$ErrorImplCopyWithImpl<$Res>
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1082,7 +1120,9 @@ class _$ErrorImpl implements _Error {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -1173,7 +1213,10 @@ abstract class _Error implements SignupState {
   const factory _Error(final String message) = _$ErrorImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1192,6 +1235,9 @@ class __$$OfflineImplCopyWithImpl<$Res>
   __$$OfflineImplCopyWithImpl(
       _$OfflineImpl _value, $Res Function(_$OfflineImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

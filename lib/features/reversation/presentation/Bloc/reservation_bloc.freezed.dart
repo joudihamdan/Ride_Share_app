@@ -79,6 +79,9 @@ class _$ReservationEventCopyWithImpl<$Res, $Val extends ReservationEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ReservationEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -98,6 +101,8 @@ class __$$CreateReservationImplCopyWithImpl<$Res>
       $Res Function(_$CreateReservationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReservationEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -137,7 +142,9 @@ class _$CreateReservationImpl implements _CreateReservation {
   @override
   int get hashCode => Object.hash(runtimeType, reservation);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReservationEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateReservationImplCopyWith<_$CreateReservationImpl> get copyWith =>
@@ -219,7 +226,10 @@ abstract class _CreateReservation implements ReservationEvent {
       _$CreateReservationImpl;
 
   Reservation get reservation;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReservationEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateReservationImplCopyWith<_$CreateReservationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -241,6 +251,8 @@ class __$$ReservationPaymentImplCopyWithImpl<$Res>
       $Res Function(_$ReservationPaymentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReservationEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -289,7 +301,9 @@ class _$ReservationPaymentImpl implements _ReservationPayment {
   @override
   int get hashCode => Object.hash(runtimeType, password, reservationId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReservationEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReservationPaymentImplCopyWith<_$ReservationPaymentImpl> get copyWith =>
@@ -373,7 +387,10 @@ abstract class _ReservationPayment implements ReservationEvent {
 
   String get password;
   int get reservationId;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReservationEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReservationPaymentImplCopyWith<_$ReservationPaymentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -395,6 +412,8 @@ class __$$GetReservationImplCopyWithImpl<$Res>
       _$GetReservationImpl _value, $Res Function(_$GetReservationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReservationEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -434,7 +453,9 @@ class _$GetReservationImpl implements _GetReservation {
   @override
   int get hashCode => Object.hash(runtimeType, bicycleId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReservationEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GetReservationImplCopyWith<_$GetReservationImpl> get copyWith =>
@@ -515,7 +536,10 @@ abstract class _GetReservation implements ReservationEvent {
   const factory _GetReservation(final int bicycleId) = _$GetReservationImpl;
 
   int get bicycleId;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReservationEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GetReservationImplCopyWith<_$GetReservationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -585,6 +609,9 @@ class _$ReservationStateCopyWithImpl<$Res, $Val extends ReservationState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of ReservationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -601,6 +628,9 @@ class __$$LoadingImplCopyWithImpl<$Res>
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of ReservationState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -713,6 +743,8 @@ class __$$ReservationLoadedImplCopyWithImpl<$Res>
       $Res Function(_$ReservationLoadedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReservationState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -752,7 +784,9 @@ class _$ReservationLoadedImpl implements _ReservationLoaded {
   @override
   int get hashCode => Object.hash(runtimeType, reservation);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReservationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReservationLoadedImplCopyWith<_$ReservationLoadedImpl> get copyWith =>
@@ -834,7 +868,10 @@ abstract class _ReservationLoaded implements ReservationState {
       _$ReservationLoadedImpl;
 
   ReservationResponse get reservation;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReservationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReservationLoadedImplCopyWith<_$ReservationLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -856,6 +893,8 @@ class __$$ErrorImplCopyWithImpl<$Res>
       _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReservationState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -894,7 +933,9 @@ class _$ErrorImpl implements _Error {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReservationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
@@ -974,7 +1015,10 @@ abstract class _Error implements ReservationState {
   const factory _Error(final String message) = _$ErrorImpl;
 
   String get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReservationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

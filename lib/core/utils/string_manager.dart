@@ -17,11 +17,31 @@ class StringManager {
   String get create => S.of(context).createaccount;
   String get login => S.of(context).LogIn;
   String get skip => S.of(context).skip;
-  String get go =>S.of(context).go;
+  String get go => S.of(context).go;
 
+  static String phone = "Phone Number";
+  static String password = "Password";
+  static String successLogin = "Login Successful";
+  static String wrongLogin = "Please fill all the fields correctly";
+  static String first = "First Name";
+  static String last = "Last Name";
+  static String username = "username";
+  static String birthdate = "birth date";
+  static String signIn = "Sign in";
+  static String register = "Register";
+  static String confirm = "confirm Password";
+  static String setPassword = "set your password";
+  static String successRegister = 'Account Create Successful';
+  static String wrongFill = 'Please fill all the fields correctly';
+  static String wallet = 'Wallet';
+  static String home = 'Home';
+  static String favourite = 'Favourite';
+  static String offer = 'Offer';
+  static String profile = 'Profile';
 
   static String enterLocation = "Enable your location";
-  static String locationText = "Choose your location to start find the request around you";
+  static String locationText =
+      "Choose your location to start find the request around you";
 
   static String payment = "Payment Success";
   static String paymentDes =

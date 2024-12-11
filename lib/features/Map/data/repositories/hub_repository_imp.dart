@@ -28,8 +28,7 @@ class HubRepositoryImp implements HubsRepository {
         final result = await hubService.getAllHub(latitude, longitude);
         hubLocalData.cachedHubs(result);
         return Right(result);
-      } catch(e) {
-        print("errror");
+      } catch (e) {
         return Left(ServerFailure(message: 'failed to get hubs'));
       }
     } else {

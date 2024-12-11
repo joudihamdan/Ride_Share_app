@@ -7,5 +7,4 @@ class HubState with _$HubState {
   const factory HubState.error(String failureType) = _Error;
   const factory HubState.loaded(List<Hub> hubs) = _Loaded;
 
-
 }

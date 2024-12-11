@@ -15,7 +15,7 @@ class HaveAccountStatement extends StatelessWidget {
         const Text("already have account?"),
         TextButton(
             onPressed: () {
-              NavigationHelper.navigateWithFade(context, const LoginPage());
+              NavigationHelper.navigateWithFade(context,  LoginPage());
             },
             child: Text(
               "login",

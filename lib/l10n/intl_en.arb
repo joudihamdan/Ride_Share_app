@@ -10,6 +10,7 @@
     "createaccount" :"Create an account",
     "LogIn":"Log In",
     "skip":"Skip",
-    "go":"Go"
+    "go":"Go",
+    "phone":"Phone Number"
 
 }
