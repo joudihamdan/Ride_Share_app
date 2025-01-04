@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:ride_share_app/core/utils/assets_manager.dart';
 import 'package:ride_share_app/core/utils/string_manager.dart';
+import 'package:ride_share_app/features/Favourite/presentation/pages/favourite_page.dart';
+import 'package:ride_share_app/features/HomePage/widgets/custom_drawer.dart';
 import 'package:ride_share_app/features/HomePage/widgets/navigation_bar_item.dart';
 import 'package:ride_share_app/features/Map/presentation/pages/map_page.dart';
 import 'package:ride_share_app/features/Map/presentation/widgets/custom_flutter_map.dart';
 import 'package:ride_share_app/features/Wallet/presentation/pages/wallet_page.dart';
 import 'package:ride_share_app/features/onBoarding/pages/welcom_page.dart';
+
+import '../../../core/utils/color_manager.dart';
+import '../../Offer/presentation/pages/offer_page.dart';
+import 'profile_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,15 +26,16 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> pages = [
     const MapPage(),
-    const WelcomPage(),
+    const FavouritePage(),
     WalletPage(),
-    CustomFlutterMap(),
-    const WelcomPage(),
+    const OfferPage(),
+    const ProfilePage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const CustomDrawer(),
       body: PageView(
         controller: _pageController,
         children: List.generate(pages.length, (index) => pages[index]),
@@ -36,6 +43,24 @@ class _HomePageState extends State<HomePage> {
       extendBody: true,
       bottomNavigationBar: Stack(
         children: [
+          Positioned(
+            top: 35,
+            left: 13,
+            child: Container(
+              decoration: BoxDecoration(
+                color: ColorManager.green100,
+                borderRadius: BorderRadius.circular(4),
+              ),
+              child: Builder(builder: (context) {
+                return IconButton(
+                  onPressed: () {
+                    Scaffold.of(context).openDrawer();
+                  },
+                  icon: const Icon(Icons.menu_outlined),
+                );
+              }),
+            ),
+          ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Image.asset(

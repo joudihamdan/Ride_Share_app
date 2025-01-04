@@ -91,8 +91,10 @@ class ItemsBuilder extends StatelessWidget {
                                   )
                                 ],
                               ),
-                              Image.network('https://${items[index].photoPath}',
-                                  width: 120, height: 80),
+                              Image.asset(items[index].photoPath,
+                                  // Image.network('https://${items[index].photoPath}',
+                                  width: 120,
+                                  height: 80),
                             ],
                           ),
                           const SizedBox(
@@ -102,10 +104,11 @@ class ItemsBuilder extends StatelessWidget {
                             buttonName: " Book bike",
                             onPressed: () {
                               NavigationHelper.navigateWithFade(
-                                  context,
-                                  BicyclePage(
-                                    bicycleId: items[index].id,
-                                  ));
+                                context,
+                                BicyclePage(
+                                  bicycleId: items[index].id,
+                                ),
+                              );
                             },
                             width: 400,
                             height: 40,

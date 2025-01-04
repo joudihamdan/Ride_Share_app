@@ -9,23 +9,20 @@ class BackAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.bottomLeft,
-      child: InkWell(
-        onTap: () {
-          Navigator.of(context).pop();
-        },
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Image.asset("${AssetsManager.imagesPath}/angle-left.png",width: 20,height: 20,),
-            Text(
-              "back",
-              style: StyleManager.skipAndback.copyWith(fontSize: 14),
-            )
-          ],
-        ),
+    return InkWell(
+      onTap: () {
+        Navigator.of(context).pop();
+      },
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Image.asset("${AssetsManager.imagesPath}/angle-left.png",width: 20,height: 20,),
+          Text(
+            "Back",
+            style: StyleManager.skipAndback.copyWith(fontSize: 14),
+          )
+        ],
       ),
     );
   }

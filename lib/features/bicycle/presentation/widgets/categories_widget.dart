@@ -45,15 +45,7 @@ class CategoriesWidget extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Center(
-              child: Text(
-                "Choose Category",
-                style: StyleManager.boldHeader,
-              ),
-            ),
-          ),
+          
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(15.0),

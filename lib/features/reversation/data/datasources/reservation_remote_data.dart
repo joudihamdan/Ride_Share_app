@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
-
+import 'package:flutter/material.dart';
+import 'package:ride_share_app/core/networks/dio_client.dart';
 import '../../../../core/errors/exceptions.dart';
+import '../../../../core/injection_container.dart';
 import '../models/reservation_model.dart';
 import '../models/reservation_response_model.dart';
 
@@ -15,31 +17,13 @@ abstract class ReservationRemoteData {
 }
 
 class ReseervationRemoteDataImp implements ReservationRemoteData {
-  final Dio dio;
-  Response response;
-
-  ReseervationRemoteDataImp({
-    required this.dio,
-    required this.response,
-  });
-  String token =
-"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwOTM2NzA2MTY5IiwiaWF0IjoxNzI2NTcwMTEwLCJleHAiOjE3MjY2NTY1MTB9.Sr-sNo_ov4ywKTMnczE6r0zbWTqLnHZ4YA6l1L-P5lU";
-
   @override
   Future<ReservationResponseModel> createNewReservation(
       ReservationModel reservation) async {
     try {
-      response =
-          await dio.post("https://rideshare.devscape.online/api/v1/reservation",
-              //options: getHeader(useToken: true),
-              options: Options(
-                headers: {
-                  "Content-Type": "application/json",
-                  "accept": "*/*",
-                  "Authorization": "Bearer $token"
-                },
-              ),
-              data: reservation.toJson());
+      final response = await sl<DioClient>().post(
+          "http://199.192.19.220:3012/api/v1/reservation",
+          data: reservation.toJson());
       if (response.statusCode == 200) {
         dynamic body = response.data['body'];
         ReservationResponseModel data = ReservationResponseModel.fromJson(body);
@@ -47,24 +31,17 @@ class ReseervationRemoteDataImp implements ReservationRemoteData {
       } else {
         throw ServerException(message: '');
       }
-    } on DioException {
-      throw ServerException(message: '');
+    } on DioException catch(error) {
+      debugPrint(error.message);
+      throw ServerException(message:error.type.name );
     }
   }
 
   @override
   Future<ReservationResponseModel> getReservationById(int reservationId) async {
     try {
-      response = await dio.get(
-        "https://rideshare.devscape.online/api/v1/reservation/by-reservation-id/$reservationId",
-        //options: getHeader(useToken: true),
-        options: Options(
-          headers: {
-            "Content-Type": "application/json",
-            "accept": "*/*",
-            "Authorization": "Bearer $token"
-          },
-        ),
+      final response = await sl<DioClient>().get(
+        "http://199.192.19.220:3012/api/v1/reservation/by-reservation-id/$reservationId",
       );
       if (response.statusCode == 200) {
         dynamic body = response.data['body'];
@@ -78,21 +55,12 @@ class ReseervationRemoteDataImp implements ReservationRemoteData {
     }
   }
 
-
   @override
   Future<List<ReservationResponseModel>> getReservationsByClientId(
       int clientId) async {
     try {
-      response = await dio.get(
-        "https://rideshare.devscape.online/api/v1/reservation/by-bicycle-id/$clientId",
-        //options: getHeader(useToken: true),
-        options: Options(
-          headers: {
-            "Content-Type": "application/json",
-            "accept": "*/*",
-            "Authorization": "Bearer $token"
-          },
-        ),
+      final response = await sl<DioClient>().get(
+        "http://199.192.19.220:3012/api/v1/reservation/by-bicycle-id/$clientId",
       );
       if (response.statusCode == 200) {
         List<dynamic> body = response.data['body'];
@@ -112,16 +80,8 @@ class ReseervationRemoteDataImp implements ReservationRemoteData {
   Future<ReservationResponseModel> reservationPayment(
       String password, int reservationId) async {
     try {
-      response = await dio.post(
-          "https://rideshare.devscape.online/api/v1/reservation/reseravation-payment",
-          //options: getHeader(useToken: true),
-          options: Options(
-            headers: {
-              "Content-Type": "application/json",
-              "accept": "*/*",
-              "Authorization": "Bearer $token"
-            },
-          ),
+      final response = await sl<DioClient>().post(
+          "http://199.192.19.220:3012/api/v1/reservation/reseravation-payment",
           data: {"walletPassword": password, "reservationID": reservationId});
       if (response.statusCode == 200) {
         dynamic body = response.data['body'];

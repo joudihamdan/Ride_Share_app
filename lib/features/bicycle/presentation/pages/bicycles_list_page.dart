@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lottie/lottie.dart';
 import 'package:ride_share_app/core/injection_container.dart' as di;
+import 'package:ride_share_app/core/utils/style_maneger.dart';
 import 'package:ride_share_app/features/bicycle/presentation/bloc/bicycle_bloc.dart';
 import 'package:ride_share_app/features/bicycle/presentation/widgets/bicycle_list_builder.dart';
 
@@ -43,8 +45,15 @@ class BicyclesListPage extends StatelessWidget {
                         return ItemsBuilder(items: items);
                       },
                       error: (message) {
-                        return Center(
-                          child: Text(message),
+                        return Column(
+                          children: [
+                            SizedBox(
+                              width: 400,
+                              height: 400,
+                              child:Lottie.asset("assets/images/bicycle.json",fit: BoxFit.contain) ,
+                            ),
+                            Text("Try again later",style: StyleManager.boldHeader,)
+                          ],
                         );
                       },
                     ) ??

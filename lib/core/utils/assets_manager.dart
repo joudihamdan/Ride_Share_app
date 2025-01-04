@@ -18,8 +18,11 @@ class AssetsManager {
   static const navigationBar = '$imagesPath/Vector.png';
   static const location = '$imagesPath/Location.png';
   static const place = '$imagesPath/Place Indicate.png';
+  static const profile = '$imagesPath/profile.png';
+    static const thankStar = '$imagesPath/star.png';
 
-  /// Icons
+
+
 
   /// Fonst
   static const poppin = '$fontPath/Poppins-Regular.ttf';

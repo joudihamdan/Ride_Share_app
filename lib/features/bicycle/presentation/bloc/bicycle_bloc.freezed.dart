@@ -19,7 +19,6 @@ mixin _$BicycleEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getCategories,
-    required TResult Function(String category) getBicyclesOfCategory,
     required TResult Function(int bicycleId) getBicycle,
     required TResult Function(String category, int hubId) getHubContent,
   }) =>
@@ -27,7 +26,6 @@ mixin _$BicycleEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getCategories,
-    TResult? Function(String category)? getBicyclesOfCategory,
     TResult? Function(int bicycleId)? getBicycle,
     TResult? Function(String category, int hubId)? getHubContent,
   }) =>
@@ -35,7 +33,6 @@ mixin _$BicycleEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getCategories,
-    TResult Function(String category)? getBicyclesOfCategory,
     TResult Function(int bicycleId)? getBicycle,
     TResult Function(String category, int hubId)? getHubContent,
     required TResult orElse(),
@@ -44,8 +41,6 @@ mixin _$BicycleEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetCategories value) getCategories,
-    required TResult Function(_GetBicyclesByCategory value)
-        getBicyclesOfCategory,
     required TResult Function(_GetBicycle value) getBicycle,
     required TResult Function(_GetHubContent value) getHubContent,
   }) =>
@@ -53,7 +48,6 @@ mixin _$BicycleEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetCategories value)? getCategories,
-    TResult? Function(_GetBicyclesByCategory value)? getBicyclesOfCategory,
     TResult? Function(_GetBicycle value)? getBicycle,
     TResult? Function(_GetHubContent value)? getHubContent,
   }) =>
@@ -61,7 +55,6 @@ mixin _$BicycleEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetCategories value)? getCategories,
-    TResult Function(_GetBicyclesByCategory value)? getBicyclesOfCategory,
     TResult Function(_GetBicycle value)? getBicycle,
     TResult Function(_GetHubContent value)? getHubContent,
     required TResult orElse(),
@@ -132,7 +125,6 @@ class _$GetCategoriesImpl implements _GetCategories {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getCategories,
-    required TResult Function(String category) getBicyclesOfCategory,
     required TResult Function(int bicycleId) getBicycle,
     required TResult Function(String category, int hubId) getHubContent,
   }) {
@@ -143,7 +135,6 @@ class _$GetCategoriesImpl implements _GetCategories {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getCategories,
-    TResult? Function(String category)? getBicyclesOfCategory,
     TResult? Function(int bicycleId)? getBicycle,
     TResult? Function(String category, int hubId)? getHubContent,
   }) {
@@ -154,7 +145,6 @@ class _$GetCategoriesImpl implements _GetCategories {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getCategories,
-    TResult Function(String category)? getBicyclesOfCategory,
     TResult Function(int bicycleId)? getBicycle,
     TResult Function(String category, int hubId)? getHubContent,
     required TResult orElse(),
@@ -169,8 +159,6 @@ class _$GetCategoriesImpl implements _GetCategories {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetCategories value) getCategories,
-    required TResult Function(_GetBicyclesByCategory value)
-        getBicyclesOfCategory,
     required TResult Function(_GetBicycle value) getBicycle,
     required TResult Function(_GetHubContent value) getHubContent,
   }) {
@@ -181,7 +169,6 @@ class _$GetCategoriesImpl implements _GetCategories {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetCategories value)? getCategories,
-    TResult? Function(_GetBicyclesByCategory value)? getBicyclesOfCategory,
     TResult? Function(_GetBicycle value)? getBicycle,
     TResult? Function(_GetHubContent value)? getHubContent,
   }) {
@@ -192,7 +179,6 @@ class _$GetCategoriesImpl implements _GetCategories {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetCategories value)? getCategories,
-    TResult Function(_GetBicyclesByCategory value)? getBicyclesOfCategory,
     TResult Function(_GetBicycle value)? getBicycle,
     TResult Function(_GetHubContent value)? getHubContent,
     required TResult orElse(),
@@ -206,163 +192,6 @@ class _$GetCategoriesImpl implements _GetCategories {
 
 abstract class _GetCategories implements BicycleEvent {
   const factory _GetCategories() = _$GetCategoriesImpl;
-}
-
-/// @nodoc
-abstract class _$$GetBicyclesByCategoryImplCopyWith<$Res> {
-  factory _$$GetBicyclesByCategoryImplCopyWith(
-          _$GetBicyclesByCategoryImpl value,
-          $Res Function(_$GetBicyclesByCategoryImpl) then) =
-      __$$GetBicyclesByCategoryImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String category});
-}
-
-/// @nodoc
-class __$$GetBicyclesByCategoryImplCopyWithImpl<$Res>
-    extends _$BicycleEventCopyWithImpl<$Res, _$GetBicyclesByCategoryImpl>
-    implements _$$GetBicyclesByCategoryImplCopyWith<$Res> {
-  __$$GetBicyclesByCategoryImplCopyWithImpl(_$GetBicyclesByCategoryImpl _value,
-      $Res Function(_$GetBicyclesByCategoryImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of BicycleEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? category = null,
-  }) {
-    return _then(_$GetBicyclesByCategoryImpl(
-      null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$GetBicyclesByCategoryImpl implements _GetBicyclesByCategory {
-  const _$GetBicyclesByCategoryImpl(this.category);
-
-  @override
-  final String category;
-
-  @override
-  String toString() {
-    return 'BicycleEvent.getBicyclesOfCategory(category: $category)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetBicyclesByCategoryImpl &&
-            (identical(other.category, category) ||
-                other.category == category));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, category);
-
-  /// Create a copy of BicycleEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GetBicyclesByCategoryImplCopyWith<_$GetBicyclesByCategoryImpl>
-      get copyWith => __$$GetBicyclesByCategoryImplCopyWithImpl<
-          _$GetBicyclesByCategoryImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() getCategories,
-    required TResult Function(String category) getBicyclesOfCategory,
-    required TResult Function(int bicycleId) getBicycle,
-    required TResult Function(String category, int hubId) getHubContent,
-  }) {
-    return getBicyclesOfCategory(category);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getCategories,
-    TResult? Function(String category)? getBicyclesOfCategory,
-    TResult? Function(int bicycleId)? getBicycle,
-    TResult? Function(String category, int hubId)? getHubContent,
-  }) {
-    return getBicyclesOfCategory?.call(category);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getCategories,
-    TResult Function(String category)? getBicyclesOfCategory,
-    TResult Function(int bicycleId)? getBicycle,
-    TResult Function(String category, int hubId)? getHubContent,
-    required TResult orElse(),
-  }) {
-    if (getBicyclesOfCategory != null) {
-      return getBicyclesOfCategory(category);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_GetCategories value) getCategories,
-    required TResult Function(_GetBicyclesByCategory value)
-        getBicyclesOfCategory,
-    required TResult Function(_GetBicycle value) getBicycle,
-    required TResult Function(_GetHubContent value) getHubContent,
-  }) {
-    return getBicyclesOfCategory(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetCategories value)? getCategories,
-    TResult? Function(_GetBicyclesByCategory value)? getBicyclesOfCategory,
-    TResult? Function(_GetBicycle value)? getBicycle,
-    TResult? Function(_GetHubContent value)? getHubContent,
-  }) {
-    return getBicyclesOfCategory?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetCategories value)? getCategories,
-    TResult Function(_GetBicyclesByCategory value)? getBicyclesOfCategory,
-    TResult Function(_GetBicycle value)? getBicycle,
-    TResult Function(_GetHubContent value)? getHubContent,
-    required TResult orElse(),
-  }) {
-    if (getBicyclesOfCategory != null) {
-      return getBicyclesOfCategory(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _GetBicyclesByCategory implements BicycleEvent {
-  const factory _GetBicyclesByCategory(final String category) =
-      _$GetBicyclesByCategoryImpl;
-
-  String get category;
-
-  /// Create a copy of BicycleEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetBicyclesByCategoryImplCopyWith<_$GetBicyclesByCategoryImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -435,7 +264,6 @@ class _$GetBicycleImpl implements _GetBicycle {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getCategories,
-    required TResult Function(String category) getBicyclesOfCategory,
     required TResult Function(int bicycleId) getBicycle,
     required TResult Function(String category, int hubId) getHubContent,
   }) {
@@ -446,7 +274,6 @@ class _$GetBicycleImpl implements _GetBicycle {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getCategories,
-    TResult? Function(String category)? getBicyclesOfCategory,
     TResult? Function(int bicycleId)? getBicycle,
     TResult? Function(String category, int hubId)? getHubContent,
   }) {
@@ -457,7 +284,6 @@ class _$GetBicycleImpl implements _GetBicycle {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getCategories,
-    TResult Function(String category)? getBicyclesOfCategory,
     TResult Function(int bicycleId)? getBicycle,
     TResult Function(String category, int hubId)? getHubContent,
     required TResult orElse(),
@@ -472,8 +298,6 @@ class _$GetBicycleImpl implements _GetBicycle {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetCategories value) getCategories,
-    required TResult Function(_GetBicyclesByCategory value)
-        getBicyclesOfCategory,
     required TResult Function(_GetBicycle value) getBicycle,
     required TResult Function(_GetHubContent value) getHubContent,
   }) {
@@ -484,7 +308,6 @@ class _$GetBicycleImpl implements _GetBicycle {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetCategories value)? getCategories,
-    TResult? Function(_GetBicyclesByCategory value)? getBicyclesOfCategory,
     TResult? Function(_GetBicycle value)? getBicycle,
     TResult? Function(_GetHubContent value)? getHubContent,
   }) {
@@ -495,7 +318,6 @@ class _$GetBicycleImpl implements _GetBicycle {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetCategories value)? getCategories,
-    TResult Function(_GetBicyclesByCategory value)? getBicyclesOfCategory,
     TResult Function(_GetBicycle value)? getBicycle,
     TResult Function(_GetHubContent value)? getHubContent,
     required TResult orElse(),
@@ -597,7 +419,6 @@ class _$GetHubContentImpl implements _GetHubContent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getCategories,
-    required TResult Function(String category) getBicyclesOfCategory,
     required TResult Function(int bicycleId) getBicycle,
     required TResult Function(String category, int hubId) getHubContent,
   }) {
@@ -608,7 +429,6 @@ class _$GetHubContentImpl implements _GetHubContent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getCategories,
-    TResult? Function(String category)? getBicyclesOfCategory,
     TResult? Function(int bicycleId)? getBicycle,
     TResult? Function(String category, int hubId)? getHubContent,
   }) {
@@ -619,7 +439,6 @@ class _$GetHubContentImpl implements _GetHubContent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getCategories,
-    TResult Function(String category)? getBicyclesOfCategory,
     TResult Function(int bicycleId)? getBicycle,
     TResult Function(String category, int hubId)? getHubContent,
     required TResult orElse(),
@@ -634,8 +453,6 @@ class _$GetHubContentImpl implements _GetHubContent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetCategories value) getCategories,
-    required TResult Function(_GetBicyclesByCategory value)
-        getBicyclesOfCategory,
     required TResult Function(_GetBicycle value) getBicycle,
     required TResult Function(_GetHubContent value) getHubContent,
   }) {
@@ -646,7 +463,6 @@ class _$GetHubContentImpl implements _GetHubContent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetCategories value)? getCategories,
-    TResult? Function(_GetBicyclesByCategory value)? getBicyclesOfCategory,
     TResult? Function(_GetBicycle value)? getBicycle,
     TResult? Function(_GetHubContent value)? getHubContent,
   }) {
@@ -657,7 +473,6 @@ class _$GetHubContentImpl implements _GetHubContent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetCategories value)? getCategories,
-    TResult Function(_GetBicyclesByCategory value)? getBicyclesOfCategory,
     TResult Function(_GetBicycle value)? getBicycle,
     TResult Function(_GetHubContent value)? getHubContent,
     required TResult orElse(),

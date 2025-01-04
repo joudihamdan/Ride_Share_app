@@ -21,12 +21,11 @@ class WalletBloc extends Bloc<WalletEvent, WalletState> {
   GetMyWalletUseCase walletUseCase;
   GetValidCodeUseCase validCodeUseCase;
 
-  WalletBloc({
-    required this.createAccountUseCase,
-    required this.moneyUseCase,
-    required this.walletUseCase,
-    required this.validCodeUseCase,
-  }) : super(const WalletState.initial()) {
+  WalletBloc(
+     this.createAccountUseCase,
+     this.moneyUseCase,
+     this.walletUseCase,
+     this.validCodeUseCase,) : super(const WalletState.initial()) {
     on<WalletEvent>((event, emit) async {
       await event.when(
         addWallet: (password, confirm, bankaccount) async {

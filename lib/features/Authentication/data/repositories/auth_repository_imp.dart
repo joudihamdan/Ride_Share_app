@@ -2,6 +2,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:ride_share_app/core/errors/failures.dart';
 import 'package:ride_share_app/core/networks/internet_check.dart';
+import 'package:ride_share_app/core/store/getit.dart';
 import 'package:ride_share_app/features/Authentication/data/datasources/auth_service.dart';
 import 'package:ride_share_app/features/Authentication/data/models/login_model.dart';
 import 'package:ride_share_app/features/Authentication/data/models/signup_model.dart';
@@ -9,6 +10,9 @@ import 'package:ride_share_app/features/Authentication/domain/entities/authentic
 import 'package:ride_share_app/features/Authentication/domain/entities/login_req.dart';
 import 'package:ride_share_app/features/Authentication/domain/entities/signup_req.dart';
 import 'package:ride_share_app/features/Authentication/domain/repositories/auth_repository.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../../../core/injection_container.dart';
 
 class AuthRepositoryImp extends AuthRepository {
   AuthService service;
@@ -43,7 +47,8 @@ class AuthRepositoryImp extends AuthRepository {
       try {
         LoginModel loginModel = LoginModel.fromLoginReq(loginReq);
         final result = await service.login(loginModel);
-        print("repo right");
+        
+        
         return Right(result);
       } catch (e) {
         print("repo left");

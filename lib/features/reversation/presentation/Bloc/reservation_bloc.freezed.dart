@@ -548,6 +548,10 @@ abstract class _GetReservation implements ReservationEvent {
 mixin _$ReservationState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() successCreate,
+    required TResult Function() errorCreate,
+    required TResult Function() successPayment,
+    required TResult Function() errorPayment,
     required TResult Function() loading,
     required TResult Function(ReservationResponse reservation)
         reservationLoaded,
@@ -556,6 +560,10 @@ mixin _$ReservationState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? successCreate,
+    TResult? Function()? errorCreate,
+    TResult? Function()? successPayment,
+    TResult? Function()? errorPayment,
     TResult? Function()? loading,
     TResult? Function(ReservationResponse reservation)? reservationLoaded,
     TResult? Function(String message)? error,
@@ -563,6 +571,10 @@ mixin _$ReservationState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? successCreate,
+    TResult Function()? errorCreate,
+    TResult Function()? successPayment,
+    TResult Function()? errorPayment,
     TResult Function()? loading,
     TResult Function(ReservationResponse reservation)? reservationLoaded,
     TResult Function(String message)? error,
@@ -571,6 +583,10 @@ mixin _$ReservationState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_successCreate value) successCreate,
+    required TResult Function(_errorCreate value) errorCreate,
+    required TResult Function(_successPayment value) successPayment,
+    required TResult Function(_errorPayment value) errorPayment,
     required TResult Function(_Loading value) loading,
     required TResult Function(_ReservationLoaded value) reservationLoaded,
     required TResult Function(_Error value) error,
@@ -578,6 +594,10 @@ mixin _$ReservationState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_successCreate value)? successCreate,
+    TResult? Function(_errorCreate value)? errorCreate,
+    TResult? Function(_successPayment value)? successPayment,
+    TResult? Function(_errorPayment value)? errorPayment,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_ReservationLoaded value)? reservationLoaded,
     TResult? Function(_Error value)? error,
@@ -585,6 +605,10 @@ mixin _$ReservationState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_successCreate value)? successCreate,
+    TResult Function(_errorCreate value)? errorCreate,
+    TResult Function(_successPayment value)? successPayment,
+    TResult Function(_errorPayment value)? errorPayment,
     TResult Function(_Loading value)? loading,
     TResult Function(_ReservationLoaded value)? reservationLoaded,
     TResult Function(_Error value)? error,
@@ -612,6 +636,550 @@ class _$ReservationStateCopyWithImpl<$Res, $Val extends ReservationState>
 
   /// Create a copy of ReservationState
   /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$successCreateImplCopyWith<$Res> {
+  factory _$$successCreateImplCopyWith(
+          _$successCreateImpl value, $Res Function(_$successCreateImpl) then) =
+      __$$successCreateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$successCreateImplCopyWithImpl<$Res>
+    extends _$ReservationStateCopyWithImpl<$Res, _$successCreateImpl>
+    implements _$$successCreateImplCopyWith<$Res> {
+  __$$successCreateImplCopyWithImpl(
+      _$successCreateImpl _value, $Res Function(_$successCreateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ReservationState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$successCreateImpl implements _successCreate {
+  const _$successCreateImpl();
+
+  @override
+  String toString() {
+    return 'ReservationState.successCreate()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$successCreateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() successCreate,
+    required TResult Function() errorCreate,
+    required TResult Function() successPayment,
+    required TResult Function() errorPayment,
+    required TResult Function() loading,
+    required TResult Function(ReservationResponse reservation)
+        reservationLoaded,
+    required TResult Function(String message) error,
+  }) {
+    return successCreate();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? successCreate,
+    TResult? Function()? errorCreate,
+    TResult? Function()? successPayment,
+    TResult? Function()? errorPayment,
+    TResult? Function()? loading,
+    TResult? Function(ReservationResponse reservation)? reservationLoaded,
+    TResult? Function(String message)? error,
+  }) {
+    return successCreate?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? successCreate,
+    TResult Function()? errorCreate,
+    TResult Function()? successPayment,
+    TResult Function()? errorPayment,
+    TResult Function()? loading,
+    TResult Function(ReservationResponse reservation)? reservationLoaded,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (successCreate != null) {
+      return successCreate();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_successCreate value) successCreate,
+    required TResult Function(_errorCreate value) errorCreate,
+    required TResult Function(_successPayment value) successPayment,
+    required TResult Function(_errorPayment value) errorPayment,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_ReservationLoaded value) reservationLoaded,
+    required TResult Function(_Error value) error,
+  }) {
+    return successCreate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_successCreate value)? successCreate,
+    TResult? Function(_errorCreate value)? errorCreate,
+    TResult? Function(_successPayment value)? successPayment,
+    TResult? Function(_errorPayment value)? errorPayment,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_ReservationLoaded value)? reservationLoaded,
+    TResult? Function(_Error value)? error,
+  }) {
+    return successCreate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_successCreate value)? successCreate,
+    TResult Function(_errorCreate value)? errorCreate,
+    TResult Function(_successPayment value)? successPayment,
+    TResult Function(_errorPayment value)? errorPayment,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_ReservationLoaded value)? reservationLoaded,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (successCreate != null) {
+      return successCreate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _successCreate implements ReservationState {
+  const factory _successCreate() = _$successCreateImpl;
+}
+
+/// @nodoc
+abstract class _$$errorCreateImplCopyWith<$Res> {
+  factory _$$errorCreateImplCopyWith(
+          _$errorCreateImpl value, $Res Function(_$errorCreateImpl) then) =
+      __$$errorCreateImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$errorCreateImplCopyWithImpl<$Res>
+    extends _$ReservationStateCopyWithImpl<$Res, _$errorCreateImpl>
+    implements _$$errorCreateImplCopyWith<$Res> {
+  __$$errorCreateImplCopyWithImpl(
+      _$errorCreateImpl _value, $Res Function(_$errorCreateImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ReservationState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$errorCreateImpl implements _errorCreate {
+  const _$errorCreateImpl();
+
+  @override
+  String toString() {
+    return 'ReservationState.errorCreate()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$errorCreateImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() successCreate,
+    required TResult Function() errorCreate,
+    required TResult Function() successPayment,
+    required TResult Function() errorPayment,
+    required TResult Function() loading,
+    required TResult Function(ReservationResponse reservation)
+        reservationLoaded,
+    required TResult Function(String message) error,
+  }) {
+    return errorCreate();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? successCreate,
+    TResult? Function()? errorCreate,
+    TResult? Function()? successPayment,
+    TResult? Function()? errorPayment,
+    TResult? Function()? loading,
+    TResult? Function(ReservationResponse reservation)? reservationLoaded,
+    TResult? Function(String message)? error,
+  }) {
+    return errorCreate?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? successCreate,
+    TResult Function()? errorCreate,
+    TResult Function()? successPayment,
+    TResult Function()? errorPayment,
+    TResult Function()? loading,
+    TResult Function(ReservationResponse reservation)? reservationLoaded,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (errorCreate != null) {
+      return errorCreate();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_successCreate value) successCreate,
+    required TResult Function(_errorCreate value) errorCreate,
+    required TResult Function(_successPayment value) successPayment,
+    required TResult Function(_errorPayment value) errorPayment,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_ReservationLoaded value) reservationLoaded,
+    required TResult Function(_Error value) error,
+  }) {
+    return errorCreate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_successCreate value)? successCreate,
+    TResult? Function(_errorCreate value)? errorCreate,
+    TResult? Function(_successPayment value)? successPayment,
+    TResult? Function(_errorPayment value)? errorPayment,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_ReservationLoaded value)? reservationLoaded,
+    TResult? Function(_Error value)? error,
+  }) {
+    return errorCreate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_successCreate value)? successCreate,
+    TResult Function(_errorCreate value)? errorCreate,
+    TResult Function(_successPayment value)? successPayment,
+    TResult Function(_errorPayment value)? errorPayment,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_ReservationLoaded value)? reservationLoaded,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (errorCreate != null) {
+      return errorCreate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _errorCreate implements ReservationState {
+  const factory _errorCreate() = _$errorCreateImpl;
+}
+
+/// @nodoc
+abstract class _$$successPaymentImplCopyWith<$Res> {
+  factory _$$successPaymentImplCopyWith(_$successPaymentImpl value,
+          $Res Function(_$successPaymentImpl) then) =
+      __$$successPaymentImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$successPaymentImplCopyWithImpl<$Res>
+    extends _$ReservationStateCopyWithImpl<$Res, _$successPaymentImpl>
+    implements _$$successPaymentImplCopyWith<$Res> {
+  __$$successPaymentImplCopyWithImpl(
+      _$successPaymentImpl _value, $Res Function(_$successPaymentImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ReservationState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$successPaymentImpl implements _successPayment {
+  const _$successPaymentImpl();
+
+  @override
+  String toString() {
+    return 'ReservationState.successPayment()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$successPaymentImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() successCreate,
+    required TResult Function() errorCreate,
+    required TResult Function() successPayment,
+    required TResult Function() errorPayment,
+    required TResult Function() loading,
+    required TResult Function(ReservationResponse reservation)
+        reservationLoaded,
+    required TResult Function(String message) error,
+  }) {
+    return successPayment();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? successCreate,
+    TResult? Function()? errorCreate,
+    TResult? Function()? successPayment,
+    TResult? Function()? errorPayment,
+    TResult? Function()? loading,
+    TResult? Function(ReservationResponse reservation)? reservationLoaded,
+    TResult? Function(String message)? error,
+  }) {
+    return successPayment?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? successCreate,
+    TResult Function()? errorCreate,
+    TResult Function()? successPayment,
+    TResult Function()? errorPayment,
+    TResult Function()? loading,
+    TResult Function(ReservationResponse reservation)? reservationLoaded,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (successPayment != null) {
+      return successPayment();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_successCreate value) successCreate,
+    required TResult Function(_errorCreate value) errorCreate,
+    required TResult Function(_successPayment value) successPayment,
+    required TResult Function(_errorPayment value) errorPayment,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_ReservationLoaded value) reservationLoaded,
+    required TResult Function(_Error value) error,
+  }) {
+    return successPayment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_successCreate value)? successCreate,
+    TResult? Function(_errorCreate value)? errorCreate,
+    TResult? Function(_successPayment value)? successPayment,
+    TResult? Function(_errorPayment value)? errorPayment,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_ReservationLoaded value)? reservationLoaded,
+    TResult? Function(_Error value)? error,
+  }) {
+    return successPayment?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_successCreate value)? successCreate,
+    TResult Function(_errorCreate value)? errorCreate,
+    TResult Function(_successPayment value)? successPayment,
+    TResult Function(_errorPayment value)? errorPayment,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_ReservationLoaded value)? reservationLoaded,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (successPayment != null) {
+      return successPayment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _successPayment implements ReservationState {
+  const factory _successPayment() = _$successPaymentImpl;
+}
+
+/// @nodoc
+abstract class _$$errorPaymentImplCopyWith<$Res> {
+  factory _$$errorPaymentImplCopyWith(
+          _$errorPaymentImpl value, $Res Function(_$errorPaymentImpl) then) =
+      __$$errorPaymentImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$errorPaymentImplCopyWithImpl<$Res>
+    extends _$ReservationStateCopyWithImpl<$Res, _$errorPaymentImpl>
+    implements _$$errorPaymentImplCopyWith<$Res> {
+  __$$errorPaymentImplCopyWithImpl(
+      _$errorPaymentImpl _value, $Res Function(_$errorPaymentImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ReservationState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$errorPaymentImpl implements _errorPayment {
+  const _$errorPaymentImpl();
+
+  @override
+  String toString() {
+    return 'ReservationState.errorPayment()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$errorPaymentImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() successCreate,
+    required TResult Function() errorCreate,
+    required TResult Function() successPayment,
+    required TResult Function() errorPayment,
+    required TResult Function() loading,
+    required TResult Function(ReservationResponse reservation)
+        reservationLoaded,
+    required TResult Function(String message) error,
+  }) {
+    return errorPayment();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? successCreate,
+    TResult? Function()? errorCreate,
+    TResult? Function()? successPayment,
+    TResult? Function()? errorPayment,
+    TResult? Function()? loading,
+    TResult? Function(ReservationResponse reservation)? reservationLoaded,
+    TResult? Function(String message)? error,
+  }) {
+    return errorPayment?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? successCreate,
+    TResult Function()? errorCreate,
+    TResult Function()? successPayment,
+    TResult Function()? errorPayment,
+    TResult Function()? loading,
+    TResult Function(ReservationResponse reservation)? reservationLoaded,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (errorPayment != null) {
+      return errorPayment();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_successCreate value) successCreate,
+    required TResult Function(_errorCreate value) errorCreate,
+    required TResult Function(_successPayment value) successPayment,
+    required TResult Function(_errorPayment value) errorPayment,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_ReservationLoaded value) reservationLoaded,
+    required TResult Function(_Error value) error,
+  }) {
+    return errorPayment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_successCreate value)? successCreate,
+    TResult? Function(_errorCreate value)? errorCreate,
+    TResult? Function(_successPayment value)? successPayment,
+    TResult? Function(_errorPayment value)? errorPayment,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_ReservationLoaded value)? reservationLoaded,
+    TResult? Function(_Error value)? error,
+  }) {
+    return errorPayment?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_successCreate value)? successCreate,
+    TResult Function(_errorCreate value)? errorCreate,
+    TResult Function(_successPayment value)? successPayment,
+    TResult Function(_errorPayment value)? errorPayment,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_ReservationLoaded value)? reservationLoaded,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (errorPayment != null) {
+      return errorPayment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _errorPayment implements ReservationState {
+  const factory _errorPayment() = _$errorPaymentImpl;
 }
 
 /// @nodoc
@@ -655,6 +1223,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() successCreate,
+    required TResult Function() errorCreate,
+    required TResult Function() successPayment,
+    required TResult Function() errorPayment,
     required TResult Function() loading,
     required TResult Function(ReservationResponse reservation)
         reservationLoaded,
@@ -666,6 +1238,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? successCreate,
+    TResult? Function()? errorCreate,
+    TResult? Function()? successPayment,
+    TResult? Function()? errorPayment,
     TResult? Function()? loading,
     TResult? Function(ReservationResponse reservation)? reservationLoaded,
     TResult? Function(String message)? error,
@@ -676,6 +1252,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? successCreate,
+    TResult Function()? errorCreate,
+    TResult Function()? successPayment,
+    TResult Function()? errorPayment,
     TResult Function()? loading,
     TResult Function(ReservationResponse reservation)? reservationLoaded,
     TResult Function(String message)? error,
@@ -690,6 +1270,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_successCreate value) successCreate,
+    required TResult Function(_errorCreate value) errorCreate,
+    required TResult Function(_successPayment value) successPayment,
+    required TResult Function(_errorPayment value) errorPayment,
     required TResult Function(_Loading value) loading,
     required TResult Function(_ReservationLoaded value) reservationLoaded,
     required TResult Function(_Error value) error,
@@ -700,6 +1284,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_successCreate value)? successCreate,
+    TResult? Function(_errorCreate value)? errorCreate,
+    TResult? Function(_successPayment value)? successPayment,
+    TResult? Function(_errorPayment value)? errorPayment,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_ReservationLoaded value)? reservationLoaded,
     TResult? Function(_Error value)? error,
@@ -710,6 +1298,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_successCreate value)? successCreate,
+    TResult Function(_errorCreate value)? errorCreate,
+    TResult Function(_successPayment value)? successPayment,
+    TResult Function(_errorPayment value)? errorPayment,
     TResult Function(_Loading value)? loading,
     TResult Function(_ReservationLoaded value)? reservationLoaded,
     TResult Function(_Error value)? error,
@@ -796,6 +1388,10 @@ class _$ReservationLoadedImpl implements _ReservationLoaded {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() successCreate,
+    required TResult Function() errorCreate,
+    required TResult Function() successPayment,
+    required TResult Function() errorPayment,
     required TResult Function() loading,
     required TResult Function(ReservationResponse reservation)
         reservationLoaded,
@@ -807,6 +1403,10 @@ class _$ReservationLoadedImpl implements _ReservationLoaded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? successCreate,
+    TResult? Function()? errorCreate,
+    TResult? Function()? successPayment,
+    TResult? Function()? errorPayment,
     TResult? Function()? loading,
     TResult? Function(ReservationResponse reservation)? reservationLoaded,
     TResult? Function(String message)? error,
@@ -817,6 +1417,10 @@ class _$ReservationLoadedImpl implements _ReservationLoaded {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? successCreate,
+    TResult Function()? errorCreate,
+    TResult Function()? successPayment,
+    TResult Function()? errorPayment,
     TResult Function()? loading,
     TResult Function(ReservationResponse reservation)? reservationLoaded,
     TResult Function(String message)? error,
@@ -831,6 +1435,10 @@ class _$ReservationLoadedImpl implements _ReservationLoaded {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_successCreate value) successCreate,
+    required TResult Function(_errorCreate value) errorCreate,
+    required TResult Function(_successPayment value) successPayment,
+    required TResult Function(_errorPayment value) errorPayment,
     required TResult Function(_Loading value) loading,
     required TResult Function(_ReservationLoaded value) reservationLoaded,
     required TResult Function(_Error value) error,
@@ -841,6 +1449,10 @@ class _$ReservationLoadedImpl implements _ReservationLoaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_successCreate value)? successCreate,
+    TResult? Function(_errorCreate value)? errorCreate,
+    TResult? Function(_successPayment value)? successPayment,
+    TResult? Function(_errorPayment value)? errorPayment,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_ReservationLoaded value)? reservationLoaded,
     TResult? Function(_Error value)? error,
@@ -851,6 +1463,10 @@ class _$ReservationLoadedImpl implements _ReservationLoaded {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_successCreate value)? successCreate,
+    TResult Function(_errorCreate value)? errorCreate,
+    TResult Function(_successPayment value)? successPayment,
+    TResult Function(_errorPayment value)? errorPayment,
     TResult Function(_Loading value)? loading,
     TResult Function(_ReservationLoaded value)? reservationLoaded,
     TResult Function(_Error value)? error,
@@ -944,6 +1560,10 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() successCreate,
+    required TResult Function() errorCreate,
+    required TResult Function() successPayment,
+    required TResult Function() errorPayment,
     required TResult Function() loading,
     required TResult Function(ReservationResponse reservation)
         reservationLoaded,
@@ -955,6 +1575,10 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? successCreate,
+    TResult? Function()? errorCreate,
+    TResult? Function()? successPayment,
+    TResult? Function()? errorPayment,
     TResult? Function()? loading,
     TResult? Function(ReservationResponse reservation)? reservationLoaded,
     TResult? Function(String message)? error,
@@ -965,6 +1589,10 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? successCreate,
+    TResult Function()? errorCreate,
+    TResult Function()? successPayment,
+    TResult Function()? errorPayment,
     TResult Function()? loading,
     TResult Function(ReservationResponse reservation)? reservationLoaded,
     TResult Function(String message)? error,
@@ -979,6 +1607,10 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(_successCreate value) successCreate,
+    required TResult Function(_errorCreate value) errorCreate,
+    required TResult Function(_successPayment value) successPayment,
+    required TResult Function(_errorPayment value) errorPayment,
     required TResult Function(_Loading value) loading,
     required TResult Function(_ReservationLoaded value) reservationLoaded,
     required TResult Function(_Error value) error,
@@ -989,6 +1621,10 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_successCreate value)? successCreate,
+    TResult? Function(_errorCreate value)? errorCreate,
+    TResult? Function(_successPayment value)? successPayment,
+    TResult? Function(_errorPayment value)? errorPayment,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_ReservationLoaded value)? reservationLoaded,
     TResult? Function(_Error value)? error,
@@ -999,6 +1635,10 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(_successCreate value)? successCreate,
+    TResult Function(_errorCreate value)? errorCreate,
+    TResult Function(_successPayment value)? successPayment,
+    TResult Function(_errorPayment value)? errorPayment,
     TResult Function(_Loading value)? loading,
     TResult Function(_ReservationLoaded value)? reservationLoaded,
     TResult Function(_Error value)? error,

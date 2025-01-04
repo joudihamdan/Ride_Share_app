@@ -21,3 +21,5 @@ Future<Position> getCurrentLocation() async {
   return await Geolocator.getCurrentPosition(
       locationSettings: locationSettings);
 }
+
+

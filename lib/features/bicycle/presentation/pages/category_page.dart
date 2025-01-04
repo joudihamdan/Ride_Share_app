@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -9,51 +11,41 @@ import 'package:ride_share_app/features/bicycle/presentation/widgets/categories_
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key, required this.hubId});
   final int hubId;
-  
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context)  {
+      create: (context) {
         return di.sl<BicycleBloc>()..add(const BicycleEvent.getCategories());
       },
-
-      child: Builder(
-        builder: (context) {
-          context.read<BicycleBloc>().add((const BicycleEvent.getCategories()));
-          return Scaffold(
-            //     appBar: AppBar(
-            //   leading: backAppBar(),
-            // ),
-            body: BlocBuilder<BicycleBloc, BicycleState>(
-              builder: (context, state) {
-                return state.whenOrNull(
-                      loaing: () {
-                        return const Center(
-                          child: CircularProgressIndicator(),
-                        );
-                      },
-                      categoriesLoaded: (categories) {
-                        print("Categories loaded.");
-                        return CategoriesWidget(
-                          hubId: hubId,
-                          categories: categories,
-                        );
-                      },
-                      error: (message) {
-                        return Center(
-                          child: Text(message),
-                        );
-                      },
-                    ) ??
-                    const Center(
-                      child: Text(
-                          'Something went wrong or no state change detected.'),
+      child: Scaffold(
+        body: BlocBuilder<BicycleBloc, BicycleState>(
+          builder: (context, state) {
+            return state.whenOrNull(
+                  loaing: () {
+                    return const Center(
+                      child: CircularProgressIndicator(),
                     );
-              },
-            ),
-          );
-        },
+                  },
+                  categoriesLoaded: (categories) {
+                    print("Categories loaded.");
+                    return CategoriesWidget(
+                      hubId: hubId,
+                      categories: categories,
+                    );
+                  },
+                  error: (message) {
+                    return Center(
+                      child: Text(message),
+                    );
+                  },
+                ) ??
+                const Center(
+                  child:
+                      Text('Something went wrong or no state change detected.'),
+                );
+          },
+        ),
       ),
     );
   }

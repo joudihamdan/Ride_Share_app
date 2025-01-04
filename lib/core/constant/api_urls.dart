@@ -1,3 +1,7 @@
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../injection_container.dart';
+
 class ApiUrls {
   static const baseUrl = 'http://199.192.19.220:3012/api/v1/';
   static const register = '${baseUrl}auth/register';
@@ -7,7 +11,8 @@ class ApiUrls {
       "${baseUrl}hub-content/$hubId?bicycleCategory=$category";
   static const wallet = '${baseUrl}wallet';
   static const validCode = '${baseUrl}wallet/All-valid-codes';
+  static const getCategories ="${baseUrl}bicycle/bicycles-categories";
+  static const getBicycleById ="${baseUrl}bicycle/";
 }
 
-String token =
-    "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIwOTM2NzA2MTY5IiwiaWF0IjoxNzMzODUzNzU3LCJleHAiOjE3MzM5NDAxNTd9.h0OtYo1Pc8PRSOi0c2lpZ9b-xX3Lx9LlI26WgVmqGgg";
+String? token = sl<SharedPreferences>().getString('token') ;

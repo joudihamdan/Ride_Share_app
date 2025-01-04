@@ -15,7 +15,7 @@ part 'reservation_state.dart';
 class ReservationBloc extends Bloc<ReservationEvent, ReservationState> {
   CreateReservationUseCase reservationUseCase;
   GetReservationByIdUseCase byIdUseCase;
- // GetReservationByClientidUseCase byClientidUseCase;
+  // GetReservationByClientidUseCase byClientidUseCase;
   ReservationPaymentUseCase paymentUseCase;
 
   ReservationBloc(
@@ -23,17 +23,17 @@ class ReservationBloc extends Bloc<ReservationEvent, ReservationState> {
     this.byIdUseCase,
     this.paymentUseCase,
   ) : super(const ReservationState.loading()) {
-    
     on<ReservationEvent>((event, emit) async {
-      await event.when(createReservation: (reservation) async {
+      await event.when(
+        createReservation: (reservation) async {
         emit(const ReservationState.loading());
         final reservationInfo = await reservationUseCase(reservation);
         reservationInfo.fold(
           (reservationInfo) => emit(
-            const ReservationState.error("error"),
+            const ReservationState.error("Failed create Reservation"),
           ),
           (reservationInfo) => emit(
-            ReservationState.reservationLoaded(reservationInfo),
+            const ReservationState.successCreate(),
           ),
         );
       }, reservationPayment: (password, reservationId) async {
@@ -41,10 +41,10 @@ class ReservationBloc extends Bloc<ReservationEvent, ReservationState> {
         final payment = await paymentUseCase(password, reservationId);
         payment.fold(
           (payment) => emit(
-            const ReservationState.error("error"),
+            const ReservationState.error("Failed Payment"),
           ),
           (payment) => emit(
-            ReservationState.reservationLoaded(payment),
+            const ReservationState.successPayment(),
           ),
         );
       }, getReservation: (reservationId) async {

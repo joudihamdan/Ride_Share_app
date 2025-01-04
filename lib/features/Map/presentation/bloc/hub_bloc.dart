@@ -14,18 +14,17 @@ class HubBloc extends Bloc<HubEvent, HubState> {
     on<HubEvent>(
       (event, emit) async {
         await event.when(
-          getAllHubs: (double latitude, double longitude) async {
-          final result = await useCase(latitude, longitude);
-          result.fold((result) => emit(HubState.error(getFailureType(result))),
-              (result) {
-            return result.isNotEmpty
-                ? emit(HubState.loaded(result))
-                : emit(const HubState.empty());
-          });
-        }, getLocation: () { 
-          
-
-         });
+            getAllHubs: (double latitude, double longitude) async {
+              final result = await useCase(latitude, longitude);
+              result.fold(
+                  (result) => emit(HubState.error(getFailureType(result))),
+                  (result) {
+                return result.isNotEmpty
+                    ? emit(HubState.loaded(result))
+                    : emit(const HubState.empty());
+              });
+            },
+            getLocation: () {});
       },
     );
   }

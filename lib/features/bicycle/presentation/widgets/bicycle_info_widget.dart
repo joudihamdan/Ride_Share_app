@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:ride_share_app/core/global/helper/navigation_helper.dart';
 import 'package:ride_share_app/core/global/widgets/button_with_fill.dart';
 import 'package:ride_share_app/core/global/widgets/button_without_fill.dart';
 import 'package:ride_share_app/core/utils/color_manager.dart';
 import 'package:ride_share_app/core/utils/style_maneger.dart';
 import 'package:ride_share_app/features/bicycle/domain/entities/bicycle.dart';
 import 'package:ride_share_app/features/bicycle/presentation/widgets/bicycle_info_container.dart';
+import 'package:ride_share_app/features/reversation/presentation/pages/reservation_page.dart';
 
 class BicycleInfoWidget extends StatelessWidget {
   const BicycleInfoWidget({super.key, required this.bicycle});
@@ -28,8 +30,10 @@ class BicycleInfoWidget extends StatelessWidget {
             height: 20,
           ),
           Center(
-            child: Image.network("https://${bicycle.photoPath}",
-                width: 200, height: 150),
+            child: Image.asset(bicycle.photoPath,
+                //Image.network("https://${bicycle.photoPath}",
+                width: 200,
+                height: 150),
           ),
           const SizedBox(
             height: 30,
@@ -91,7 +95,7 @@ class BicycleInfoWidget extends StatelessWidget {
               ButtonWithoutFill(
                 buttonName: "Book Later",
                 onPressed: () {
-              
+                  Navigator.pop(context);
                 },
                 width: 160,
                 height: 50,
@@ -99,7 +103,8 @@ class BicycleInfoWidget extends StatelessWidget {
               ButtonWithFill(
                 buttonName: "Book now",
                 onPressed: () {
-                
+                  NavigationHelper.navigateWithFade(
+                      context, ReservationPage(bicycle: bicycle));
                 },
                 width: 160,
                 height: 50,
